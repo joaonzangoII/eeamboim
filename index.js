@@ -1,14 +1,20 @@
 
 require("express-async-errors");
 const compression = require('compression');
-const express = require('express'),
+ express = require('express'),
+ cors = require('cors'),
+ app = express();
+
 app = express();
+
 const port = process.env.PORT || 3000,
         bodyParser = require('body-parser'),
         path = require('path'),
         methodOverride = require('method-override');
 
         const indexRoutes = require('./routes/index');
+
+app.use(cors());
 
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -18,6 +24,7 @@ app.use(express.static(path.resolve(__dirname+ '/views')));
 app.use('/views', express.static(path.resolve(__dirname, 'views/partials')));
 
 app.use(compression())
+app.use(express.static(path.resolve(__dirname+ '/node_modules'), { maxAge: 86400000 /* 1d */ }));
 app.use(express.static(path.resolve(__dirname+ '/public'), { maxAge: 86400000 /* 1d */ }));
 app.use(methodOverride("_method"));
  
