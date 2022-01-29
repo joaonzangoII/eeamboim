@@ -14,9 +14,8 @@
     <link rel="stylesheet" type="text/css" href="/css/footer.css">
     <link rel="stylesheet" type="text/css" href="/css/home/banner-icons.css">
     <link rel="stylesheet" type="text/css" href="/css/menu.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-
+    <script src="/js/fontawesome.js"></script>
     <title>Home</title>
 
     <style>
@@ -25,9 +24,85 @@
 
 
 
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: #313132;
+            font-family: "Montserrat", sans-serif !important;
+        }
+
+
 
         @media only screen and (min-width: 270px) {
             .vertical-text {
+                display: none;
+            }
+
+            .verticalLine {
+                display: none;
+            }
+
+            .banner-tittle {
+                font-size: 17px;
+            }
+
+        }
+
+        @media only screen and (min-width: 577px) {
+            .intro-section-line {
+                float: left;
+                margin-left: 32%;
+            }
+
+            .yard-img-div {
+                margin: 0px;
+                display: inline;
+            }
+
+            .yard-desc {
+                padding-left: 4%;
+            }
+
+            .yard-utilities {
+                padding-left: 4%;
+            }
+
+            .yard-desc {
+                display: inline-block;
+            }
+
+            .about p {
+                font-size: 11px;
+            }
+        }
+
+        @media only screen and (min-width: 600px) {
+
+            .banner-tittle {
+                font-size: 36px;
+            }
+
+            .arrows {
+                display: none;
+            }
+
+            .about p {
+                font-size: 15px;
+            }
+
+            .intro-section-line {
+                margin-left: 0px;
+            }
+
+            .arrows {
+                display: none;
+            }
+
+            .right {
+                display: none;
+            }
+
+            .left {
                 display: none;
             }
         }
@@ -37,14 +112,58 @@
                 padding-left: 8%;
             }
 
-            .vertical-text {
-                display: none;
+            .banner-tittle {
+                font-size: 45px;
+            }
+
+            .arrows {
+                display: inline-block;
+            }
+
+            .left {
+                display: inline-block;
+            }
+
+            .right {
+                display: inline-block;
+            }
+        }
+
+        @media only screen and (min-width: 991px) {
+            .intro-description {
+                padding-left: 23%;
+            }
+
+            .intro-texto {
+                padding-left: 23%;
             }
         }
 
         @media only screen and (min-width: 1000px) {
             .intro-description {
-                padding-left: 28%;
+                padding-left: 10%;
+            }
+
+            .intro-texto {
+                padding-left: 14%;
+            }
+
+            .vertical-text {
+                display: table;
+            }
+
+            .verticalLine {
+                display: table;
+            }
+        }
+
+        @media only screen and (min-width: 1230px) {
+            .intro-description {
+                padding-left: 0px;
+            }
+
+            .intro-texto {
+                padding-left: 4%;
             }
         }
 
@@ -73,7 +192,6 @@
         }
 
         .banner-tittle {
-            font-size: 45px;
             font-family: "Montserrat", sans-serif;
             letter-spacing: 6.4px;
         }
@@ -172,7 +290,7 @@
         }
 
         .yard-utilities {
-            padding-top: 13%;
+            padding-top: 2%;
         }
 
         .intro {
@@ -220,10 +338,6 @@
             padding-top: 20%;
         }
 
-        .yard-desc {
-            display: inline-block;
-        }
-
         .separator {
             display: flex;
             align-items: center;
@@ -249,10 +363,6 @@
         .about {
             font-family: "Montserrat", sans-serif;
             height: 882px;
-        }
-
-        .about p {
-            font-size: 17px;
         }
 
         .about-div {
@@ -329,7 +439,7 @@
             </div>
         </section>
 
-        <section class="col-md-5 ">
+        <section class="col-md-5 intro-section-line">
             <div class="intro">
                 <div class="intro-text">
                     <div class="separator">
@@ -361,12 +471,17 @@
 
         <section class="col-md-12 intro-section" style="padding: 0px;">
 
-            <div class="col-md-5" style="padding: 0px;">
+            <div class="col-md-5 yard-img-div" style="padding: 0px;">
                 <article class="yard-img">
-                    <img src="/images/yard.png">
+                    <img srcset=" 
+                    /images/sections/home-section-4.png 4x, 
+                    /images/sections/home-section-3.png 3x, 
+                    /images/sections/home-section-2.png 2x, 
+                    /images/sections/home-section-1.png 1x " src="/images/sections/home-section-1">
+
                 </article>
             </div>
-            <div class="col-md-7">
+            <div class="col-md-7" style="    display: table;">
                 <div class="intro-description">
 
                     <span class="vertical-text"> Yard utilities</span>
@@ -416,7 +531,12 @@
         </section>
 
         <section>
-            <img class="img-fluid fabric-full-img" src="/images/banner2.jpg">
+            <img class="img-fluid fabric-full-img" srcset=" 
+            /images/sections/home-full-section-4.png 4x, 
+            /images/sections/home-full-section-3.png 3x, 
+            /images/sections/home-full-section-2.png 2x, 
+            /images/sections/home-full-section-1.png 1x " src="/images/sections/home-full-section-2">
+
         </section>
         <section class="about">
             <div class="eea-marcadeagua">

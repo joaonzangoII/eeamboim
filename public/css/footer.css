@@ -8,6 +8,11 @@
     font-family: "Montserrat", sans-serif;
 }
 
+.copyright-section{
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
 .logo-footer{
     margin: 0 auto;
     display: table;
