@@ -14,7 +14,7 @@
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/css/footer.css">
     <link rel="stylesheet" type="text/css" href="/css/menu.css">
- 
+
     <script src="/js/fontawesome.js"></script>
     <title>Technology</title>
     <style>
@@ -59,31 +59,40 @@
                 margin-left: 8%;
             }
 
+            .yard-utilities-div {
+                display: none;
+            }
+
+            .yard-section {
+                display: none;
+            }
+
+            .img-fluid {
+                width: 100%;
+            }
+            .section-fabrication{
+                display: table;
+                margin: 0 auto;
+            }
+            .product-div{
+                display: table;
+                margin: 0 auto;
+            }
+            .shallow-section{
+                display: table;
+                margin: 0 auto;
+            }
+
         }
 
-        @media only screen and (min-width: 270px) {
-            .vertical-text {
-                display: none;
+        @media only screen and (min-width: 577px) {
+            .intro-section-line {
+                float: left;
+                margin-left: 32%;
             }
 
-            .verticalLine {
-                display: none;
-            }
-
-            .banner-tittle {
-                font-size: 17px;
-            }
-
-            .right {
-                display: none;
-            }
-
-            .arrows {
-                display: none;
-            }
-
-            .left {
-                display: none;
+            .img-fluid {
+                width: 100%;
             }
         }
 
@@ -95,6 +104,10 @@
 
             .arrows {
                 display: none;
+            }
+
+            .intro-section-line {
+                margin-left: 8%;
             }
         }
 
@@ -152,7 +165,19 @@
             .yard-utilities-div {
                 display: inline-block;
             }
-            
+
+            .intro-texto {
+                padding-left: 23%;
+            }
+
+            .yard-section {
+                display: table;
+            }
+
+            .img-fluid {
+                width: 94%;
+            }
+
         }
 
         @media only screen and (min-width: 1000px) {
@@ -171,6 +196,25 @@
             .verticalLine {
                 display: table;
             }
+
+            .intro-texto {
+                padding-left: 14%;
+            }
+        }
+
+        @media only screen and (min-width: 1230px) {
+            .intro-description {
+                padding-left: 0px;
+            }
+
+            .intro-texto {
+                padding-left: 4%;
+            }
+        }
+
+        .intro-texto {
+            color: #858585;
+            font-family: "Montserrat", sans-serif;
         }
 
         .banner {
@@ -360,7 +404,6 @@
             width: 100%;
             writing-mode: vertical-rl;
             float: right;
-            padding-top: 25%;
             padding-right: 81%;
         }
 
@@ -485,41 +528,39 @@
                 <i class="fab fa-whatsapp icons-banner"></i>
             </div>
         </section>
-        <section class="col-md-12" style="padding-top: 5%;">
-            <section class="col-md-6 intro">
-                <div class="intro-text">
-                    <div class="separator">
-                        <div class="line"></div>
-                        <h6>our technologys</h6>
+
+        <section class="col-md-12">
+            <aside class="col-md-5 intro-section-line">
+                <div class="intro">
+                    <div class="intro-text">
+                        <div class="separator">
+                            <div class="line"></div>
+                            <h6>our technologys</h6>
+                        </div>
                     </div>
                 </div>
-            </section>
+            </aside>
 
-            <section class="col-md-6 intro-section">
-                <div class="intro-description">
-                    <p>
-                        In our yard, state of art technologies are utilized for<br>
-                        manufacturing support. Specific design and drawing<br>
-                        software, as well as Matrix<br>
-                        for material traceability and primavera for planning, are <br>
-                        combined with modules developed in-house for a bespoke <br>
-                        fit to all our <br>
-                        projects and requirements
+            <aside class="col-md-6" style="float: right;">
+                <p class="intro-texto">
+                    In our yard, state of art technologies are utilized for<br>
+                    manufacturing support. Specific design and drawing<br>
+                    software, as well as Matrix<br>
+                    for material traceability and primavera for planning, are <br>
+                    combined with modules developed in-house for a bespoke <br>
+                    fit to all our <br>
+                    projects and requirements
 
-                    </p>
-
-
-                </div>
-
-            </section>
+                </p>
+            </aside>
         </section>
 
-        <section class="col-md-12 shallow-section" style="  padding: 0px; padding-top: 4%; margin-bottom: 10%; ">
+        <section class="col-md-12" style="  padding: 0px; padding-top: 4%;">
             <div class="col-md-6" style=" padding: 0px; ">
-                <img class="img-fluid float-left" src="/images/deep-water.jpg" style="width: 94%; ">
+                <img class="img-fluid float-left" src="/images/deep-water.jpg">
             </div>
 
-            <div class="col-md-4 section-fabrication">
+            <div class="col-md-4">
                 <h3 style="color: white;
             width: 10%;
             font-size: 43px;
@@ -548,7 +589,7 @@
             </div>
         </section>
 
-        <section class="col-md-12 shallow-section" style="  padding: 0px; margin-bottom: 10%; ">
+        <section class="col-md-12 " style="  padding: 0px;">
             <div class="col-md-6">
             </div>
 
@@ -580,7 +621,7 @@
             </div>
         </section>
 
-        <section class="col-md-12 shallow-section" style="  padding: 0px; padding-top: 4%; ">
+        <section class="col-md-12" style="  padding: 0px; padding-top: 4%; ">
             <div class="col-md-6" style=" padding: 0px; ">
             </div>
 
@@ -603,7 +644,7 @@
                 </p>
             </div>
 
-            <div class="col-md-2" style="padding-top: 4%;">
+            <div class="col-md-2 yard-section">
 
                 <span class="vertical-text"> Production equipment</span>
                 <div class="vertical-yard-line">
@@ -611,9 +652,10 @@
                     </div>
                 </div>
             </div>
+
         </section>
 
-        <section class="col-md-12 shallow-section" style="  padding: 0px; margin-bottom: 10%; ">
+        <section class="col-md-12" style="  padding: 0px; margin-bottom: 10%; ">
             <div class="col-md-6">
             </div>
 
@@ -633,9 +675,13 @@
         </section>
 
 
-        <section class="col-md-12" style="    padding: 0px;    margin-bottom: 5%;">
-            <img class="fabric-full-img" src="/images/2_1640x891px.png">
-        </section>
+        <section>
+            <img style="margin-bottom: 5%;" class="img-fluid fabric-full-img" srcset=" 
+            /images/sections/home-full-section-4.png 4x, 
+            /images/sections/home-full-section-3.png 3x, 
+            /images/sections/home-full-section-2.png 2x, 
+            /images/sections/home-full-section-1.png 1x " src="/images/sections/home-full-section-2">
+
 
         <%- include('partials/footer.ejs') %>
 </body>

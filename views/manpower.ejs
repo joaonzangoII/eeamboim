@@ -28,10 +28,59 @@
             font-family: "Montserrat", sans-serif !important;
         }
 
+        @media only screen and (min-width: 270px) {
+            .vertical-text {
+                display: none;
+            }
+
+            .verticalLine {
+                display: none;
+            }
+
+            .banner-tittle {
+                font-size: 17px;
+            }
+
+            .arrows {
+                display: none;
+            }
+
+            .right {
+                display: none;
+            }
+
+            .intro {
+                display: none;
+            }
+
+        }
+
         @media only screen and (min-width: 768px) {
             .container>.navbar-collapse {
                 padding-left: 23%;
                 padding-top: 1%;
+            }
+        }
+
+        @media only screen and (min-width: 860px) {
+            .intro {
+                display: block;
+            }
+        }
+
+        @media only screen and (min-width: 1000px) {
+
+            .right {
+                left: 82%;
+            display: inline-block;
+            }
+
+            .arrows {
+                display: inline-block;
+            }
+
+            .banner-tittle {
+                font-size: 36px;
             }
         }
 
@@ -46,7 +95,7 @@
         }
 
         .banner-tittle {
-            font-size: 45px;
+            
             font-family: "Montserrat", sans-serif;
             letter-spacing: 6.4px;
         }
@@ -90,8 +139,8 @@
 
         .arrows {
             position: absolute;
-            top: 73%;
-            left: 75%;
+            top: 70%;
+            left: 71%;
             width: 22%;
         }
 
@@ -106,7 +155,6 @@
             position: absolute;
             top: 75%;
             left: 82%;
-            display: inline-block;
         }
 
         .arrows .fa,
@@ -121,7 +169,7 @@
         }
 
         .arrow-p {
-            font-size: 10px;
+            font-size: 14px;
             padding-right: 39%;
         }
 
@@ -131,10 +179,6 @@
             letter-spacing: 4.8px;
             color: #ffffff;
             opacity: 1;
-        }
-
-        .intro-text {
-            padding-left: 24%;
         }
 
         .intro-section {
@@ -320,7 +364,7 @@
 
         .card-div {
             padding: 0px;
-            height: 250px;
+            height: 100%;
         }
     </style>
 </head>
@@ -330,7 +374,7 @@
     <%- include('partials/menu.ejs') %>
 
         <section class="container-banner ">
-            <img class="banner" src="/images/manpower-banner.jpg">
+            <img class="banner" src="/images/header/manpower.png">
 
             <div class="left-tittle">
                 <p class="banner-tittle">

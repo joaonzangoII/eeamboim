@@ -1,6 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,900;1,500&display=swap");
 
 
+@media only screen and (min-width: 270px) {
+  .contact-section{   
+    padding-left: 17%;
+  }
+
+  .footer-section{
+    padding-left: 0px;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+  .contact-section{   
+    padding-left: 39%;
+  }
+
+  .footer-section{
+    padding-left: 10%;
+  }
+
+}
+
+@media only screen and (min-width: 991px) {
+  .contact-section{   
+    padding-left: 49%;
+  }
+
+}
+
 .footer{
     width: 100%; 
     color: #858585;
@@ -41,7 +70,6 @@
   }
 
   .footer-section{
-    padding-left: 10%;
     padding-top: 2%;
   }
 
@@ -53,7 +81,6 @@
   .contact-section{  
     display: inline-block;
     position: absolute;
-    padding-left: 19%;
   }
   
   .other-section{
@@ -76,4 +103,12 @@
   a:hover{
     text-decoration: none;
     color: #fff;
+  }
+
+  .copyright {
+      margin: 0 auto;
+      display: table;
+      font-size: 10px;
+      font-weight: 500;
+      color: white;
   }

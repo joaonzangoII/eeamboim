@@ -28,11 +28,68 @@
             font-family: "Montserrat", sans-serif !important;
         }
 
+        @media only screen and (min-width: 270px) {
+            .vertical-text {
+                display: none;
+            }
+
+            .verticalLine {
+                display: none;
+            }
+
+            .banner-tittle {
+                font-size: 17px;
+            }
+
+            .arrows {
+                display: none;
+            }
+
+            .right {
+                display: none;
+            }
+
+            .intro {
+                display: none;
+            }
+
+        }
+
         @media only screen and (min-width: 768px) {
             .container>.navbar-collapse {
                 padding-left: 23%;
                 padding-top: 1%;
             }
+
+            .right {
+                left: 91%;
+            }
+        }
+
+        @media only screen and (min-width: 860px) {
+            .intro {
+                display: block;
+            }
+        }
+
+        @media only screen and (min-width: 1000px) {
+
+            .right {
+                left: 82%;
+            }
+
+            .arrows {
+                display: inline-block;
+            }
+
+            .banner-tittle {
+                font-size: 36px;
+            }
+        }
+
+        .right {
+            position: absolute;
+            top: 75%;
         }
 
         .banner {
@@ -46,7 +103,6 @@
         }
 
         .banner-tittle {
-            font-size: 45px;
             font-family: "Montserrat", sans-serif;
             letter-spacing: 4.4px;
         }
@@ -99,13 +155,6 @@
             position: absolute;
             top: 75%;
             left: 62%;
-            display: inline-block;
-        }
-
-        .right {
-            position: absolute;
-            top: 75%;
-            left: 82%;
             display: inline-block;
         }
 
@@ -343,7 +392,7 @@
     <%- include('partials/menu.ejs') %>
 
         <section class="container-banner ">
-            <img class="banner" src="/images/AA5.png">
+            <img class="banner" src="/images/header/quality.png">
 
             <div class="left-tittle">
                 <p class="banner-tittle">
