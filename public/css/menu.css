@@ -63,10 +63,25 @@
   background-color: white;
 } 
 
+@media only screen and (min-width: 767px) { 
+  .mobile-only{
+    display: block;
+  }
+  .default-search{
+    display: none;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .container>.navbar-collapse {
       padding-left: 31%;
       padding-top: 1%;
+  }
+  .mobile-only{
+    display: none;
+  }
+  .default-search{
+    display: block;
   }
 }
 
