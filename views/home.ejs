@@ -9,8 +9,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css"
-        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.15/css/all.min.css" />
     <link rel="stylesheet" type="text/css" href="/css/footer.css">
     <link rel="stylesheet" type="text/css" href="/css/home/banner-icons.css">
     <link rel="stylesheet" type="text/css" href="/css/menu.css">
@@ -21,17 +22,6 @@
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,900;1,500&display=swap");
         @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,900;1,500&display=swap");
-
-
-
-        body {
-            margin: 0px;
-            padding: 0px;
-            background-color: #313132;
-            font-family: "Montserrat", sans-serif !important;
-        }
-
-
 
         @media only screen and (min-width: 270px) {
             .vertical-text {
@@ -63,7 +53,7 @@
             }
 
             .eea-marcadeagua img {
-                padding-top: 74%;
+                /*padding-top: 74%;*/
             }
 
         }
@@ -123,7 +113,7 @@
             }
 
             .eea-marcadeagua img {
-                padding-top: 70%;
+                /*padding-top: 70%;*/
             }
         }
 
@@ -149,7 +139,7 @@
             }
 
             .eea-marcadeagua img {
-                padding-top: 61%;
+                /*padding-top: 61%;*/
             }
         }
 
@@ -165,8 +155,9 @@
             .fabric-full-img {
                 height: 470px;
             }
+
             .eea-marcadeagua img {
-                padding-top: 45%;
+                /*padding-top: 45%;*/
             }
         }
 
@@ -186,8 +177,9 @@
             .verticalLine {
                 display: table;
             }
+
             .eea-marcadeagua img {
-                padding-top: 36%;
+                /*padding-top: 36%;*/
             }
         }
 
@@ -199,8 +191,9 @@
             .intro-texto {
                 padding-left: 4%;
             }
+
             .eea-marcadeagua img {
-                padding-top: 31%;
+                /*padding-top: 31%;*/
             }
         }
 
@@ -210,12 +203,25 @@
             }
         }
 
+        @media screen and (max-width: 552px) {
+            .about {
+                min-height: 650px !important;
+                overflow: auto !important;
+            }
+
+            .eea-marcadeagua {
+                width: 100%;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                min-height: 200px !important;
+            }
+        }
 
         body {
             margin: 0px;
             padding: 0px;
             background-color: #313132;
-            font-family: "Montserrat", sans-serif;
+            font-family: "Montserrat", sans-serif !important;
         }
 
         .banner {
@@ -279,7 +285,7 @@
         }
 
         .intro-text {
-            padding-left: 24%;
+            /*padding-left: 24%;*/
         }
 
         .intro-section {
@@ -331,7 +337,8 @@
         }
 
         .intro {
-            width: 200px;
+            min-width: 200px;
+            max-width: 350px;
             margin-right: 9%;
             float: right;
             font-family: "Montserrat", sans-serif;
@@ -375,6 +382,11 @@
             padding-top: 20%;
         }
 
+        .yard-img,
+        .yard-img img {
+            width: 100%;
+        }
+
         .separator {
             display: flex;
             align-items: center;
@@ -384,6 +396,8 @@
             height: 1px;
             flex: 1;
             background-color: #858585;
+            width: 110px;
+            max-width: 110px;
         }
 
         .separator h6 {
@@ -398,7 +412,8 @@
 
         .about {
             font-family: "Montserrat", sans-serif;
-            height: 882px;
+            min-height: 550px;
+            /*height: 882px;*/
         }
 
         .about-div {
@@ -408,16 +423,26 @@
 
         .about-aside {
             float: right;
-            padding-right: 15%;
+            /*padding-right: 15%;*/
             color: #858585;
         }
 
+        .about-aside .description {
+            padding-left: 10%;
+        }
+
+        .about-aside aside {
+            padding-right: 2%;
+        }
+
         .eea-marcadeagua {
-            height: 200px;
+            width: 100%;
+            margin-bottom: 50px;
+            min-height: 600px;
         }
 
         .eea-marcadeagua img {
-            width: 97%;
+            width: 100%;
             position: absolute;
             opacity: 0.1;
         }
@@ -425,6 +450,35 @@
         .intro-texto {
             color: #858585;
             font-family: "Montserrat", sans-serif;
+        }
+
+        .mt-3 {
+            margin-top: 30px;
+        }
+
+        .about-icons {
+            text-align: left;
+        }
+
+        .about-icons {
+            margin-top: 100px;
+        }
+
+        .about-icons .col-md-4 {
+            margin-right: 0%;
+            margin-left: 0px;
+            padding-left: 0px;
+        }
+
+        .about-icons .col-md-4 i,
+        .about-icons .col-md-4 h4 {
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bolder;
+        }
+        .about-icons .col-md-4 .icon,
+        .about-icons .col-md-4 h4 {
+            margin-bottom: 50px;
         }
     </style>
 </head>
@@ -447,12 +501,6 @@
             font-weight: 500;"> FIND OUT MORE</p>
             </div>
 
-            <div class="language">
-                
-                <span class="vertical-text"> en</span>
-                <span class="vertical-text"> pt </span>
-            </div>
-
             <i class="fas fa-chevron-left left"></i>
             <div class="arrows">
                 <div class="col-md-2 arrow-p">
@@ -472,51 +520,47 @@
             </div>
         </section>
 
-        <section class="col-md-5 intro-section-line">
-            <div class="intro">
-                <div class="intro-text">
-                    <div class="separator">
-                        <div class="line"></div>
-                        <h6>intro</h6>
+        <div class="row mt-3">
+            <section class="col-md-5 intro-section-line">
+                <div class="intro">
+                    <div class="intro-text">
+                        <div class="separator">
+                            <div class="line"></div>
+                            <h6>intro</h6>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section class="col-md-7" style="float: right;">
-
-            <p class="intro-texto">
-                The Estaleiro Atlantico do Amboim (EAA),
-                is a <br>
-                shipyard <br>
-                and energy industry in Angola.
-                The manufacturing<br>
-                yard is <br>
-                located at Praia do Kissonde, Porto Amboim, Kwanza-<br>
-                Sul,<br>
-                Angola. Specializes in the construction
-                of underwater <br>
-                structures and the manufacture of support <br>
-                equipment for<br>
-                the oil and gas industry.
-            </p>
-        </section>
-
+            </section>
+            <section class="col-md-7" style="float: right;">
+                <p class="intro-texto">
+                    The Estaleiro Atlantico do Amboim (EAA),
+                    is a <br>
+                    shipyard <br>
+                    and energy industry in Angola.
+                    The manufacturing<br>
+                    yard is <br>
+                    located at Praia do Kissonde, Porto Amboim, Kwanza-<br>
+                    Sul,<br>
+                    Angola. Specializes in the construction
+                    of underwater <br>
+                    structures and the manufacture of support <br>
+                    equipment for<br>
+                    the oil and gas industry.
+                </p>
+            </section>
+        </div>
         <section class="col-md-12 intro-section" style="padding: 0px;">
-
             <div class="col-md-5 yard-img-div" style="padding: 0px;">
                 <article class="yard-img">
                     <img srcset=" 
-                    /images/sections/home-section-4.png 4x, 
-                    /images/sections/home-section-3.png 3x, 
-                    /images/sections/home-section-2.png 2x, 
-                    /images/sections/home-section-1.png 1x " src="/images/sections/home-section-1">
-
+                        /images/sections/home-section-4.png 4x, 
+                        /images/sections/home-section-3.png 3x, 
+                        /images/sections/home-section-2.png 2x, 
+                        /images/sections/home-section-1.png 1x " src="/images/sections/home-section-1">
                 </article>
             </div>
-            <div class="col-md-7" style="    display: table;">
+            <div class="col-md-7" style="display: table;">
                 <div class="intro-description">
-
                     <span class="vertical-text"> Yard utilities</span>
                     <aside class="yard-desc">
                         <h1>Our yard </h1>
@@ -529,7 +573,7 @@
                             Connected by road transport to Luanda
                         </p>
                     </aside>
- 
+
 
                     <aside class="yard-utilities">
                         <h1> Yard <br> utilities</h1>
@@ -556,66 +600,113 @@
                     </aside>
                 </div>
             </div>
-
         </section>
-
         <section>
             <img class="img-fluid fabric-full-img" srcset=" 
             /images/sections/home-full-section-4.png 4x, 
             /images/sections/home-full-section-3.png 3x, 
             /images/sections/home-full-section-2.png 2x, 
             /images/sections/home-full-section-1.png 1x " src="/images/sections/home-full-section-2">
-
         </section>
-        <section class="about">
-            <div class="eea-marcadeagua">
-                <img src="/images/white_logo.png">
-                <div class="about-div">
-                    <aside class="about-aside">
-                        <h1>
-                            ABOUT US
-                        </h1>
-
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing <br>
-                            elit, sed do eiusmod tempor incididunt ut labore et <br>
-                            dolore magna aliqua. Ut enim ad minim veniam, quis <br>
-                            nostrud exercitation ullamco laboris nisi ut aliquip ex <br>
-                            ea commodo consequat. Duis aute irure dolor in <br>
-                            reprehenderit in voluptate velit esse cillum dolore eu <br>
-                            fugiat nulla pariatur. Excepteur sint occaecat <br>
-                            cupidatat non proident, sunt in culpa qui officia <br>
-                            deserunt mollit anim id est laborum.
-                        </p>
-
-
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing <br>
-                            elit, sed do eiusmod tempor incididunt ut labore et <br>
-                            dolore magna aliqua. Ut enim ad minim veniam, quis <br>
-                            nostrud exercitation ullamco laboris nisi ut aliquip ex <br>
-                            ea commodo consequat. Duis aute irure dolor in <br>
-                            reprehenderit in voluptate velit esse cillum dolore eu <br>
-                            fugiat nulla pariatur. Excepteur sint occaecat <br>
-                            cupidatat non proident, sunt in culpa qui officia <br>
-                            deserunt mollit anim id est laborum.
-                        </p>
-
-
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing <br>
-                            elit, sed do eiusmod tempor incididunt ut labore et <br>
-                            dolore magna aliqua. Ut enim ad minim veniam, quis <br>
-                            nostrud exercitation ullamco laboris nisi ut aliquip ex <br>
-                            ea commodo consequat. Duis aute irure dolor in <br>
-                            reprehenderit in voluptate velit esse cillum dolore eu <br>
-                            fugiat nulla pariatur. Excepteur sint occaecat <br>
-                            cupidatat non proident, sunt in culpa qui officia <br>
-                            deserunt mollit anim id est laborum.
-                        </p>
-                    </aside>
-                </div>
+        <section class="col-md-12 about">
+            <div class="about-div">
+                <aside class="about-aside">
+                    <div class="row mt-3">
+                        <section class="col-md-5 intro-section-line"></section>
+                        <section class="col-md-7" style="float: right;">
+                            <div class="description">
+                                <aside>
+                                    <h1 class="">
+                                        ABOUT US
+                                    </h1>
+                                </aside>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="row mt-3">
+                        <section class="col-md-5 intro-section-line">
+                            <div class="intro">
+                                <div class="intro-text">
+                                    <div class="separator">
+                                        <div class="line"></div>
+                                        <h6>VISION, VALUES AND MISSION</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="col-md-7" style="float: right;">
+                            <div class="description">
+                                <p>
+                                    The Vision, Values ​​and Mission of EAA, LDA materialize the company’s ambition to
+                                    be a
+                                    reference in society,
+                                    contributing decisively to the development of the oil sector and other markets.
+                                </p>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="row mt-3 about-icons">
+                        <section class="col-md-10 col-md-offset-2">
+                            <div class="col-md-4">
+                                <div class="icon">
+                                    <i class="fas fa-eye"></i>
+                                </div>
+                                <div class="text">
+                                    <h4>Vision</h4>
+                                    <h5>
+                                        To be recognized for<br/> 
+                                        excellence, quality and rigor<br/>
+                                        in the projects carried out
+                                        and for the fulfillment of<br/> 
+                                        Social Responsibilities.
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="icon">
+                                    <i class="fas fa-infinity"></i>
+                                </div>
+                                <div class="text">
+                                    <h4>Values</h4>
+                                    <h5><b>Human</b></h5>
+                                    <h5>
+                                        Respect, Integrity, Loyalty,<br/>
+                                        Discretion, Receptiveness,<br/>
+                                        Ambition and Dedication;
+                                    </h5>
+                                    <h5><b>Social</b></h5>
+                                    <h5>
+                                        Ethics, Responsibility,<br/>
+                                        Solidarity and Culture Development;
+                                    </h5>
+                                    <h5><b>Business</b></h5>
+                                    <h5>
+                                        Rigor, Competence,<br/>
+                                        Professionalism, Efficiency,<br/>
+                                        Innovation and Transparency.
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="icon">
+                                    <i class="fas fa-compass"></i>
+                                </div>
+                                <div class="text">
+                                    <h5><h4>Mission</h4></h5>
+                                    <h5>
+                                        Deliver projects safely,<br/> 
+                                        with quality, on time and on<br/>
+                                        budget,
+                                    </h5>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </aside>
             </div>
+        </section>
+        <section class="col-md-12 eea-marcadeagua">
+            <img src="/images/white_logo.png">
         </section>
         <%- include('partials/footer.ejs') %>
 
