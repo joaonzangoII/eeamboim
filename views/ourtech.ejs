@@ -5,44 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css"
-        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.15/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/site.css">
     <link rel="stylesheet" type="text/css" href="/css/footer.css">
     <link rel="stylesheet" type="text/css" href="/css/menu.css">
-
-    <script src="/js/fontawesome.js"></script>
-    <title>Technology</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="/js/fontawesome.js"></script>    <title>Technology</title>
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,900;1,500&display=swap");
         @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,900;1,500&display=swap");
-
-        body {
-            margin: 0px;
-            padding: 0px;
-            background-color: #313132;
-            font-family: "Montserrat", sans-serif !important;
-        }
-
-        .mt-3 {
-            margin-top: 30px;
-        }
-
-        .mt-5 {
-            margin-top: 50px;
-        }
-
-        .mt-6 {
-            margin-top: 60px;
-        }
-
-        .mt-7 {
-            margin-top: 70px;
-        }
 
         @media only screen and (min-width: 270px) {
             .vertical-text {
@@ -231,7 +204,6 @@
         }
 
         .intro-texto {
-            color: #858585;
             font-family: "Montserrat", sans-serif;
         }
 
@@ -393,7 +365,6 @@
 
         .intro-description {
             word-spacing: 8px;
-            font-size: 12px;
         }
 
         h1 {
@@ -441,24 +412,6 @@
             height: 350px;
         }
 
-        .separator {
-            display: flex;
-            align-items: center;
-        }
-
-         .separator .line {
-            height: 1px;
-            flex: 1;
-            background-color: #858585;
-            width: 110px;
-            max-width: 110px;
-        }
-
-        .separator h6 {
-            padding-left: 4px;
-            color: #858585;
-        }
-
         .fabric-full-img {
             width: 100%;
             height: 470px;
@@ -499,18 +452,11 @@
         .card {
             background-color: tomato;
         }
-
-        .shallow-list {
-            color: #C4C4C4;
-            font-size: 11px;
-        }
     </style>
 </head>
 
 <body>
-
     <%- include('partials/menu.ejs') %>
-
         <section class="container-banner ">
             <img class="banner" src="/images/header/ourtech.png">
 
@@ -521,8 +467,10 @@
                 </p>
                 <i class="fa fa-play-circle"></i>
                 <p style="display: inline-block;
-            padding-left: 2%;
-            font-weight: 500;"> FIND OUT MORE</p>
+                    padding-left: 2%;
+                    font-weight: 500;">
+                    FIND OUT MORE
+                </p>
             </div>
 
             <i class="fa fa-chevron-left left"></i>
@@ -549,7 +497,7 @@
                     <div class="intro-text">
                         <div class="separator">
                             <div class="line"></div>
-                            <h6>our technologys</h6>
+                            <h6>our technology</h6>
                         </div>
                     </div>
                 </div>
@@ -564,7 +512,6 @@
                     combined with modules developed in-house for a bespoke <br>
                     fit to all our <br>
                     projects and requirements
-
                 </p>
             </aside>
         </section>
@@ -573,17 +520,11 @@
             <div class="col-md-6" style=" padding: 0px; ">
                 <img class="img-fluid float-left" src="/images/Image 7.png">
             </div>
-
             <div class="col-md-4">
-                <h3 style="color: white;
-                    width: 10%;
-                    font-size: 43px;
-                    line-height: 50px;
-                    font-weight: 400;
-                    padding-bottom: 5%;">
+                <h3 class="section-title">
                     Fabrication facilities
                 </h3>
-                <p class="shallow-list">Structural fabrication area of 180x32m <br>
+                <p>Structural fabrication area of 180x32m <br>
                     of which Covered (130x32m).<br>
                     Outside fabrication area 210x120m<br>
                     3 overhead cranes (32/8mt) 10m hook<br>
@@ -592,7 +533,8 @@
                     PIP facility<br>
                     Multi jointing facility<br>
                     Dedicated area for Blasting and<br>
-                    painting</p>
+                    painting
+                </p>
             </div>
             <div class="col-md-2 yard-utilities-div" style="padding-top: 12%;">
                 <span class="vertical-text"> Yard utilities</span>
@@ -602,15 +544,10 @@
                 </div>
             </div>
             <div class="col-md-4 mt-2">
-                <h3 style="color: white;
-                    width: 10%;
-                    font-size: 43px;
-                    line-height: 50px;
-                    font-weight: 400;
-                    padding-bottom: 5%;">
+                <h3 class="section-title">
                     Production equipment
                 </h3>
-                <p class="shallow-list">
+                <p>
                     SMAW welding equipment (22 pc) <br>
                     FCAW welding equipment (25pc)<br>
                     GTAW welding equipment (30pc) <br>
@@ -630,15 +567,10 @@
                 </p>
             </div>
             <div class="col-md-4 mt-3">
-                <h3 style="color: white;
-                    width: 10%;
-                    font-size: 43px;
-                    line-height: 50px;
-                    font-weight: 400;
-                    padding-bottom: 5%;">
+                <h3 class="section-title">
                     QC equipment
                 </h3>
-                <p class="shallow-list">
+                <p>
                     Calibrated measuring tools (wide<br>
                     range, length, temperature, pressure) <br>
                     Weighing equipment <br>
@@ -663,19 +595,14 @@
             <div class="col-md-6">
             </div>
             <div class="col-md-6 mt-3">
-                <h3 style="color: white;
-                    width: 10%;
-                    font-size: 43px;
-                    line-height: 50px;
-                    font-weight: 400;
-                    padding-bottom: 5%;">
+                <h3 class="section-title">
                     Logistc Equipment
                 </h3>
-
-                <span class="shallow-list"> 1 Liebheer crawler crane (750mt)</span>
-                <span class="shallow-list">1 Liebheer crawler crane (400mt) </span>
-                <span class="shallow-list"> 1 Terex (63mt)</span>
-
+                <ul class="shallow-list">
+                    <li class="shallow-list-item"> 1 Liebheer crawler crane (750mt)</li>
+                    <li class="shallow-list-item">1 Liebheer crawler crane (400mt) </li>
+                    <li class="shallow-list-item"> 1 Terex (63mt)</li>
+                </ul>
             </div>
         </section>
 

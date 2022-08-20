@@ -5,28 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css"
-        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.15/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/site.css">
     <link rel="stylesheet" type="text/css" href="/css/footer.css">
     <link rel="stylesheet" type="text/css" href="/css/menu.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="/js/fontawesome.js"></script>
 
     <title>QUALITY, HEALTH, </title>
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,900;1,500&display=swap");
         @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,900;1,500&display=swap");
-
-        body {
-            margin: 0px;
-            padding: 0px;
-            background-color: #313132;
-            font-family: "Montserrat", sans-serif !important;
-        }
 
         @media only screen and (min-width: 270px) {
             .vertical-text {
@@ -242,7 +233,6 @@
 
         .intro-description {
             word-spacing: 8px;
-            font-size: 12px;
         }
 
         h1 {
@@ -291,22 +281,6 @@
             height: 350px;
         }
 
-        .separator {
-            display: flex;
-            align-items: center;
-        }
-
-        .separator .line {
-            height: 1px;
-            flex: 1;
-            background-color: #858585;
-        }
-
-        .separator h6 {
-            padding-left: 4px;
-            color: #858585;
-        }
-
         .fabric-full-img {
             width: 100%;
             height: 100%;
@@ -324,7 +298,6 @@
         .about-aside {
             float: right;
             padding-right: 15%;
-            color: #858585;
         }
 
         .eea-marcadeagua {
@@ -339,11 +312,6 @@
 
         .card {
             background-color: tomato;
-        }
-
-        .shallow-list {
-            color: #C4C4C4;
-            font-size: 11px;
         }
 
         .card-image {
@@ -374,12 +342,9 @@
 </head>
 
 <body>
-
     <%- include('partials/menu.ejs') %>
-
         <section class="container-banner ">
             <img class="banner" src="/images/header/quality.png">
-
             <div class="left-tittle">
                 <p class="banner-tittle">
                     <span>QUALITY, HEALTH, </span>
@@ -388,41 +353,37 @@
                 </p>
                 <i class="fas fa-play-circle"></i>
                 <p style="display: inline-block;
-            padding-left: 2%;
-            font-weight: 500;"> FIND OUT MORE</p>
+                    padding-left: 2%;
+                    font-weight: 500;"> FIND OUT MORE
+                </p>
             </div>
 
             <div class="arrows">
-
                 <div class="col-md-8 arrow-p" style="margin-left: 2%;">
                     <p>Quality, health, safety and environmental care</p>
                 </div>
 
             </div>
-            <i class="  fas fa-chevron-right right"></i>
-
+            <i class="fas fa-chevron-right right"></i>
             <div class="social-icons-banner">
                 <i class="fab fa-facebook-f icons-banner padding-14"></i>
                 <i class="fab fa-whatsapp icons-banner"></i>
             </div>
         </section>
         <section class="col-md-12" style="padding: 0px; 
-        margin-top: 5%;
-        height: 256px;">
-            <section class="col-md-6 intro">
+            margin-top: 5%;
+            height: 256px;">
+            <section class="col-md-5 intro">
                 <div class="intro-text">
                     <div class="separator">
                         <div class="line"></div>
-                        <h6 style="font-size: 11px;">quality, health, safety and environmental care </h6>
-
+                        <h6>quality, health, <br /> safety and <br /> environmental care </h6>
                     </div>
                 </div>
             </section>
-
-            <section class="col-md-6 intro-section">
+            <section class="col-md-7 intro-section">
                 <div class="intro-description">
-                    <p style="font-weight: 400;
-                color: #C4C4C4;padding-bottom: 5%;">
+                    <p style="font-weight: 400;color: #C4C4C4;padding-bottom: 5%;">
                         Estaleiro Atlântico do Amboim operates n intregreted <br>
                         management system incorporating <br>
                         Quality, Safety, Health and environmental care which is guided <br>
@@ -439,7 +400,6 @@
 
             </section>
         </section>
-
         <section class="col-md-12 about">
             <div class="eea-marcadeagua">
                 <img class="watermark" src="/images/white_logo.png">
@@ -448,7 +408,6 @@
                 </div>
             </div>
         </section>
-
 </body>
 
 </html>

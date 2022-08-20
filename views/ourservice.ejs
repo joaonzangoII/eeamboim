@@ -5,29 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css"
-        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.15/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/site.css">
     <link rel="stylesheet" type="text/css" href="/css/footer.css">
     <link rel="stylesheet" type="text/css" href="/css/menu.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="/js/fontawesome.js"></script>
 
     <title>Services</title>
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,900;1,500&display=swap");
         @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,900;1,500&display=swap");
-
-        body {
-            margin: 0px;
-            padding: 0px;
-            background-color: #313132;
-            font-family: "Montserrat", sans-serif !important;
-        }
-
 
         @media only screen and (min-width: 270px) {
             .vertical-text {
@@ -288,7 +278,6 @@
             padding-top: 13%;
         }
 
-
         h2 {
             display: flex;
             align-items: center;
@@ -335,7 +324,6 @@
 
         .intro-description {
             word-spacing: 8px;
-            font-size: 12px;
         }
 
         h1 {
@@ -384,22 +372,6 @@
             height: 350px;
         }
 
-        .separator {
-            display: flex;
-            align-items: center;
-        }
-
-        .separator .line {
-            height: 1px;
-            flex: 1;
-            background-color: #858585;
-        }
-
-        .separator h6 {
-            padding-left: 4px;
-            color: #858585;
-        }
-
         .fabric-full-img {
             width: 100%;
             height: 470px;
@@ -412,7 +384,7 @@
         }
 
         .about p {
-            font-size: 17px;
+            font-size: 15px;
         }
 
         .about-div {
@@ -437,14 +409,34 @@
             opacity: 0.1;
         }
 
-        .shallow-list {
-            color: #C4C4C4;
-            font-size: 11px;
+        .intro-texto {
+            font-family: "Montserrat", sans-serif;
         }
 
-        .intro-texto {
-            color: #858585;
-            font-family: "Montserrat", sans-serif;
+        .grey-box-card {
+            background-color: #EDEDED;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        .grey-box-card-2 {
+            font-weight: 700;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .grey-box-card .bottom {
+            width: 100%;
+            background-color: #22222266;
+            height: 10px;
+        }
+
+        .top-boxes {
+            height: 200px;
+            font-weight: 700;
+            margin-bottom: 5%;
+            margin-top: 5%;
+            /*width: 100%;*/
         }
     </style>
 </head>
@@ -463,8 +455,10 @@
                 </p>
                 <i class="fas fa-play-circle"></i>
                 <p style="display: inline-block;
-            padding-left: 2%;
-            font-weight: 500;"> FIND OUT MORE</p>
+                    padding-left: 2%;
+                    font-weight: 500;">
+                    FIND OUT MORE
+                </p>
             </div>
 
             <i class="fas fa-chevron-left left"></i>
@@ -485,7 +479,6 @@
                 <i class="fab fa-whatsapp icons-banner"></i>
             </div>
         </section>
-
         <section class="col-md-12">
             <aside class="col-md-5 intro-section-line">
                 <div class="intro">
@@ -497,7 +490,6 @@
                     </div>
                 </div>
             </aside>
-
             <aside class="col-md-6" style="float: right;">
                 <p class="intro-texto">
                     We have strived to meet our clients demands by delivering<br>
@@ -508,82 +500,61 @@
                 </p>
             </aside>
         </section>
-
-        <section class="col-md-12" style="    display: table;
-        margin: 0 auto;
-        /* margin-top: 6%; */
-        height: 200px;
-        font-size: 12px;
-        font-weight: 700;
-        margin-bottom: 5%;
-        margin-top: 5%;
-        /* margin-left: 0%; */
-        clear: both;
-        width: 100%;">
-
-            <div class="col-md-2 first-box box">
-                <div class="card" style="background-color: #EDEDED; padding-left: 0px;padding-right: 0px;">
-                    <p style="display: table;padding: 15%;">Design and Engeneering of offshore structures
-                        &nbsp;&nbsp;&nbsp;&nbsp;</p>
-                    <div class=""
-                        style="background-color: #22222266;height: 4%;display: table;width: 100%;font-size: 30%;/* bottom: 50%; */">
-                        &nbsp;
+        <section class="col-md-12">
+            <section class="col-md-10 col-md-offset-1 top-boxes">
+                <div class="col-md-3">
+                    <div class="card grey-box-card">
+                        <p style="padding: 15%;">Design and Engineering of offshore structures
+                            &nbsp;&nbsp;&nbsp;&nbsp;</p>
+                        <div class="bottom">
+                            &nbsp;
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-md-2 box">
-                <div class="card" style="background-color: #EDEDED; padding-left: 0px;padding-right: 0px;">
-                    <p style="display: table;padding: 15%;">Procurement and Logistics for offshore structures</p>
-                    <div class=""
-                        style="background-color: #22222266;height: 4%;display: table;width: 100%;font-size: 30%;/* bottom: 50%; */">
-                        &nbsp;
+                <div class="col-md-3">
+                    <div class="card grey-box-card">
+                        <p style="padding: 15%;">Procurement and Logistics for offshore structures</p>
+                        <div class="bottom">
+                            &nbsp;
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-md-2 box">
-                <div class="card" style="background-color: #EDEDED; padding-left: 0px;padding-right: 0px;">
-                    <p style="display: table;padding: 20%;">Fabrication of offshore structures</p>
-                    <div class=""
-                        style="background-color: #22222266;height: 4%;display: table;width: 100%;font-size: 30%;/* bottom: 50%; */">
-                        &nbsp;
+                <div class="col-md-3">
+                    <div class="card grey-box-card">
+                        <p style="display: table;padding: 20%;">Fabrication of offshore structures</p>
+                        <div class="bottom">
+                            &nbsp;
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-md-2 box">
-                <div class="card" style="background-color: #EDEDED;text-align: center;">
-                    <p style="display: table;padding: 14%;">Installation and commissioning of offshore in shallow water
-                    </p>
-                    <div class=""
-                        style="background-color: #22222266;height: 4%;display: table;width: 100%;font-size: 30%;/* bottom: 50%; */">
-                        &nbsp;
+                <div class="col-md-3">
+                    <div class="card grey-box-card" style="background-color: #EDEDED;text-align: center;">
+                        <p style="display: table;padding: 14%;">Installation and commissioning of offshore in shallow
+                            water
+                        </p>
+                        <div class="bottom">
+                            &nbsp;
+                        </div>
                     </div>
                 </div>
-            </div>
-
-
+            </section>
         </section>
-
         <section class="col-md-12 shallow-section" style="  padding: 0px; margin-bottom: 10%; ">
             <div class="col-md-6" style=" padding: 0px; ">
                 <img class="img-fluid float-left" src="/images/shallow.jpg">
             </div>
 
             <div class="col-md-4 shallow-align">
-                <h3 style="color: white;
-            width: 10%;
-            font-size: 43px;
-            line-height: 50px;
-            font-weight: 400;
-            padding-bottom: 5%;">Shallow water fields</h3>
-
-                <span class="shallow-list"> • Piles </span>
-                <span class="shallow-list"> • Jackets </span>
-                <span class="shallow-list"> • Small topside modules </span>
-                <span class="shallow-list"> • Grillages </span>
-                <span class="shallow-list"> • Seafastening</span>
+                <h3 class="section-title">
+                    Shallow water fields
+                </h3>
+                <ul class="shallow-list">
+                    <li class="shallow-list-item">Piles </li>
+                    <li class="shallow-list-item">Jackets </li>
+                    <li class="shallow-list-item">Small topside modules </li>
+                    <li class="shallow-list-item">Grillages </li>
+                    <li class="shallow-list-item">Seafastening</li>
+                </ul>
             </div>
 
             <div class="col-md-2 yard-section">
@@ -602,12 +573,7 @@
             </div>
 
             <div class="col-md-6 shallow-align">
-                <h3 style="color: white;
-            width: 10%;
-            font-size: 43px;
-            line-height: 50px;
-            font-weight: 400;
-            padding-bottom: 5%;">Deep water fields</h3>
+                <h3 class="section-title">Deep water fields</h3>
                 <span class="shallow-list">Suction Piles </span>
                 <span class="shallow-list">• Buoyancy tanks </span>
                 <span class="shallow-list">• In-field flow lines </span>
@@ -628,33 +594,21 @@
             </div>
 
             <div class="col-md-6">
-                <div class="col-md-4 card" style="background-color: #EDEDED;
-            padding-left: 0px;
-            padding-right: 0px;
-            font-weight: 700;
-            text-align: center;
-            font-size: 12px;">
-                    <p style="display: table;padding: 15%;">Maintence and repairment of offshore structures:
+                <div class="col-md-4 card grey-box-card grey-box-card-2">
+                    <p style="padding: 15%;">Maintence and repairment of offshore structures:
                         Rigs, Vessels, as well drawing and tests (as required for certification).</p>
-                    <div class=""
-                        style="background-color: #22222266;height: 4%;display: table;width: 100%;font-size: 30%;">
+                    <div class="bottom">
                         &nbsp;
                     </div>
                 </div>
             </div>
 
             <div class="col-md-6" style="margin-top: 2%;">
-                <div class="col-md-4 card" style="background-color: #EDEDED;
-            padding-left: 0px;
-            padding-right: 0px;
-            font-weight: 700;
-            text-align: center;
-            font-size: 12px;margin-top: 10%;">
-                    <p style="display: table;padding: 15%;">
+                <div class="col-md-4 card grey-box-card grey-box-card-2" style="margin-top: 10%;">
+                    <p style="padding: 15%;">
                         Logistics and storage services, taking advantage of our 250m quay length with 10.6m water depth.
                     </p>
-                    <div class=""
-                        style="background-color: #22222266;height: 4%;display: table;width: 100%;font-size: 30%;">
+                    <div class="bottom">
                         &nbsp;
                     </div>
                 </div>
@@ -667,16 +621,10 @@
                 <img class="img-fluid float-left" src="/images/3_481x360px.png">
             </div>
             <div class="col-md-6">
-                <div class="col-md-4 card" style="background-color: #EDEDED;
-            padding-left: 0px;
-            padding-right: 0px;
-            font-weight: 700;
-            text-align: center;
-            font-size: 12px;margin-top: 15%;">
-                    <p style="display: table;padding: 15%;">Maintence and repairment of offshore structures:
+                <div class="col-md-4 card grey-box-card grey-box-card-2" style="margin-top: 15%;">
+                    <p style="padding: 15%;">Maintence and repairment of offshore structures:
                         Rigs, Vessels, as well drawing and tests (as required for certification).</p>
-                    <div class=""
-                        style="background-color: #22222266;height: 4%;display: table;width: 100%;font-size: 30%;">
+                    <div class="bottom">
                         &nbsp;
                     </div>
                 </div>
