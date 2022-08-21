@@ -1,38 +1,36 @@
+.arrows {
+    position: absolute;
+    top: 73%;
+    left: 64%;
+    width: 22%;
+}
 
+.arrows .fa,
+.fas {
+    font-size: 19px;
+}
 
-        .arrows {
-            position: absolute;
-            top: 73%;
-            left: 64%;
-            width: 22%;
-        }
+.left {
+    position: absolute;
+    top: 75%;
+    left: 62%;
+    display: inline-block;
+}
 
-        .left {
-            position: absolute;
-            top: 75%;
-            left: 62%;
-            display: inline-block;
-        }
+.right {
+    position: absolute;
+    top: 75%;
+    left: 82%;
+    display: inline-block;
+}
 
-        .right {
-            position: absolute;
-            top: 75%;
-            left: 82%;
-            display: inline-block;
-        }
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
 
-        .arrows .fa,
-        .fas {
-            font-size: 19px;
-        }
-
-        .bottom-left {
-            position: absolute;
-            bottom: 8px;
-            left: 16px;
-        }
-
-        .arrow-p {
-            font-size: 10px;
-            padding-right: 39%;
-        }
+.arrow-p {
+    font-size: 10px;
+    padding-right: 39%;
+}
