@@ -1,6 +1,5 @@
 const route= require('express').Router();
 
-
 route.get('/', (req,res)=>{
     res.render('home')
 }) 
@@ -9,8 +8,8 @@ route.get('/services', (req,res)=>{
     res.render('ourservice')
 })
 
-route.get('/ourtech', (req,res)=>{
-    res.render('ourtech')
+route.get('/about', (req,res)=>{
+    res.render('about')
 })
 
 route.get('/manpower', (req,res)=>{
