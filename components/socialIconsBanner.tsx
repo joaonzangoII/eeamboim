@@ -1,5 +1,5 @@
 // import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 
 // Define the props type for your component
 type MyComponentProps = {
