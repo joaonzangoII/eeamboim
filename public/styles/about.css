@@ -1,0 +1,435 @@
+@media only screen and (min-width: 270px) {
+    .vertical-text {
+        display: none;
+    }
+
+    .verticalLine {
+        display: none;
+    }
+
+    .banner-tittle {
+        font-size: 17px;
+    }
+
+    .arrows {
+        display: none;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .left {
+        display: none;
+    }
+
+    .intro {
+        width: 30%;
+        margin-left: 8%;
+    }
+
+    .yard-utilities-div {
+        display: none;
+    }
+
+    .yard-section {
+        display: none;
+    }
+
+    .img-fluid {
+        width: 100%;
+    }
+
+    .section-fabrication {
+        display: table;
+        margin: 0 auto;
+    }
+
+    .product-div {
+        display: table;
+        margin: 0 auto;
+    }
+
+    .shallow-section {
+        display: table;
+        margin: 0 auto;
+    }
+
+}
+
+@media only screen and (min-width: 577px) {
+    .intro-section-line {
+        float: left;
+        margin-left: 32%;
+    }
+
+    .img-fluid {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+
+    .banner-tittle {
+        font-size: 36px;
+    }
+
+    .arrows {
+        display: none;
+    }
+
+    .intro-section-line {
+        margin-left: 8%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .container>.navbar-collapse {
+        padding-top: 1%;
+    }
+
+    .intro {
+        width: 30%;
+        margin-left: 8%;
+    }
+
+    .section-fabrication {
+        display: inline-block;
+    }
+}
+
+@media only screen and (min-width: 877px) {
+    .intro-description {
+        padding-left: 8% ;
+    }
+
+    .banner-tittle {
+        font-size: 45px;
+    }
+
+    .arrows {
+        display: inline-block;
+    }
+
+    .left {
+        display: inline-block;
+    }
+
+    .right {
+        display: inline-block;
+    }
+
+    .intro {
+        width: 20%;
+        margin-left: 20%;
+    }
+}
+
+@media only screen and (min-width: 991px) {
+    .intro-description {
+        padding-left: 23%;
+    }
+
+    .intro-text {
+        padding-left: 23%;
+    }
+
+    .yard-utilities-div {
+        display: inline-block;
+    }
+
+    .intro-texto {
+        padding-left: 23%;
+    }
+
+    .yard-section {
+        display: table;
+    }
+
+    .img-fluid {
+        width: 94%;
+    }
+
+}
+
+@media only screen and (min-width: 1000px) {
+    .intro-description {
+        padding-left: 10%;
+    }
+
+    .intro-text {
+        padding-left: 14%;
+    }
+
+    .vertical-text {
+        display: table;
+    }
+
+    .verticalLine {
+        display: table;
+    }
+
+    .intro-texto {
+        padding-left: 14%;
+    }
+}
+
+@media only screen and (min-width: 1230px) {
+    .intro-description {
+        padding-left: 0px;
+    }
+
+    .intro-texto {
+        padding-left: 4%;
+    }
+}
+
+.intro-texto {
+    font-family: "Montserrat", sans-serif !important;
+}
+
+.banner {
+    opacity: 1.8;
+    width: 100%;
+    height: auto;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    display: block;
+}
+
+.banner-tittle {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 6.4px;
+}
+
+.container-banner {
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+.left-tittle {
+    position: absolute;
+    top: 53%;
+    margin-left: 42%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    text-align: left;
+    font-weight: 800;
+}
+
+.left-tittle,
+span {
+    display: table;
+}
+
+.padding-14 {
+    padding-bottom: 14px;
+}
+
+.icons-banner {
+    display: block;
+}
+
+.social-icons-banner {
+    display: grid;
+    position: absolute;
+    top: 53%;
+    left: 96%;
+}
+
+.arrows {
+    position: absolute;
+    top: 73%;
+    left: 64%;
+    width: 22%;
+}
+
+.left {
+    position: absolute;
+    top: 75%;
+    left: 62%;
+}
+
+.right {
+    position: absolute;
+    top: 75%;
+    left: 82%;
+}
+
+.arrows .fa,
+.fa {
+    font-size: 19px;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+.arrow-p {
+    font-size: 10px;
+    padding-right: 39%;
+}
+
+.quality-text {
+    color: #fff;
+    text-align: left;
+    letter-spacing: 4.8px;
+    color: #ffffff;
+    opacity: 1;
+}
+
+.intro-text {
+    padding-left: 24% !important;
+}
+
+.intro-section {
+    position: relative !important;
+    color: #858585 !important;;
+    font-family: "Montserrat", sans-serif !important;
+    float: right !important;
+}
+
+.yard-utilities {
+    padding-top: 13%;
+}
+
+
+h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 span {
+    background: #fff;
+    margin: 0 15px;
+}
+
+h2:before,
+h2:after {
+    background: black;
+    height: 2px;
+    flex: 1;
+    content: '';
+}
+
+h2.left:after {
+    background: none;
+}
+
+h2.right:before {
+    background: none;
+}
+
+/* .intro-section {
+    position: relative;
+    color: #858585;
+    font-family: "Montserrat", sans-serif;
+} */
+
+.yard-utilities {
+    padding-top: 13%;
+}
+
+.intro {
+    min-width: 200px !important;
+    max-width: 350px !important;
+    margin-right: 9%;
+    /* float: right; */
+    font-family: "Montserrat", sans-serif !important;
+}
+
+.intro-description {
+    word-spacing: 8px !important;;
+}
+
+h1 {
+    letter-spacing: 6.4px;
+    color: #ffffff;
+    font-size: 34px;
+    font-weight: 500;
+    padding-top: 3%;
+}
+
+.vertical-yard-line {
+    display: table;
+    left: 3%;
+    float: right;
+    padding-top: 6%;
+    padding-right: 56%;
+    width: 100%;
+}
+
+.verticalLine {
+    border-left: 2px solid #858585;
+    height: 177px;
+    margin-left: 29%;
+}
+
+.vertical-text {
+    color: white;
+    display: table;
+    width: 100%;
+    writing-mode: vertical-rl;
+    float: right;
+    padding-right: 81%;
+}
+
+.yard-img {
+    float: left;
+    padding-top: 10%;
+}
+
+.yard-desc {
+    display: inline-block;
+}
+
+.yard-img img {
+    height: 350px;
+}
+
+.fabric-full-img {
+    width: 100%;
+    height: 470px;
+    margin-top: 5%;
+}
+
+.about {
+    font-family: "Montserrat", sans-serif;
+    height: 882px;
+}
+
+.about p {
+    font-size: 17px;
+}
+
+.about-div {
+    position: relative;
+    display: contents;
+}
+
+.about-aside {
+    float: right;
+    padding-right: 15%;
+    color: #858585;
+}
+
+.eea-marcadeagua {
+    height: 200px !important;
+}
+
+.eea-marcadeagua img {
+    padding-top: 24% !important;
+    width: 97% !important;
+    position: absolute !important;
+    opacity: 0.1 !important;
+}
+
+.card {
+    background-color: tomato;
+}

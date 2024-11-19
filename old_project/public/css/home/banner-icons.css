@@ -1,0 +1,36 @@
+.arrows {
+    position: absolute;
+    top: 73%;
+    left: 64%;
+    width: 22%;
+}
+
+.arrows .fa,
+.fas {
+    font-size: 19px;
+}
+
+.left {
+    position: absolute;
+    top: 75%;
+    left: 62%;
+    display: inline-block;
+}
+
+.right {
+    position: absolute;
+    top: 75%;
+    left: 82%;
+    display: inline-block;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+.arrow-p {
+    font-size: 10px;
+    padding-right: 39%;
+}

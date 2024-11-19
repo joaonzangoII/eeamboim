@@ -1,0 +1,121 @@
+@media only screen and (min-width: 270px) {
+  .contact-section{   
+    padding-left: 17%;
+  }
+
+  .footer-section{
+    padding-left: 0px;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+  .contact-section{   
+    padding-left: 39%;
+  }
+
+  .footer-section{
+    padding-left: 15px;
+  }
+
+}
+
+@media only screen and (min-width: 991px) {
+  .contact-section{   
+    padding-left: 49%;
+  }
+
+}
+
+.footer{
+    width: 100%; 
+    color: #858585;
+    background-color: #313132;
+    font-family: "Montserrat", sans-serif;
+}
+
+.copyright-section{
+  padding-top: 3%;
+  padding-bottom: 3%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.logo-footer{
+    margin: 0 auto;
+    display: table;
+    width: 100px;
+}
+
+.half-a-border-on-bottom {
+    border-bottom:1px solid white;
+    position: relative;
+    margin-bottom: 2%;
+  }
+  .half-a-border-on-bottom:after {
+    padding:0;margin:0;display:block;/* probably not really needed? */
+    content: "";
+    width:50%;
+    height:1.1px;
+    background-color:#313132;
+    position: absolute;
+    right:0;
+    bottom: -1px;
+  } 
+
+  .item{
+      font-size: 15px;
+      margin-top: 4%;
+  }
+
+  .footer-section{
+    padding-top: 2%;
+  }
+
+  .service-section{
+      width: 169px;
+      display: inline-block;
+  }
+  
+  .contact-section{  
+    display: inline-block;
+    position: absolute;
+  }
+  
+  .other-section{
+    float: right; 
+    padding-right: 16%;
+  }
+
+
+  .tittle{
+    font-size: 17px;
+    text-decoration: none;
+    color: #858585;
+  }
+
+  a{
+    text-decoration: none;
+    color: #858585;
+  }
+
+  a:hover{
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .copyright {
+    margin: 0 auto;
+    display: flex;
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+    align-items: center;
+    justify-items: center;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .copyright p {
+    font-size: 15px !important;
+  }
