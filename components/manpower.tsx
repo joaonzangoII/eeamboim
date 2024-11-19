@@ -1,15 +1,19 @@
-const Manpower = () => {
+// Define the props type for your component
+type MyComponentProps = {
+    styles: { [key: string]: string };  // Define the structure of 'items'
+};
 
+const Manpower: React.FC<MyComponentProps> = ({ styles }) => {
     return (
-        <section className="col-md-12 card-div" style={{ padding: ' 0px', marginBottom: '5%' }}>
-            <div className="col-md-4 card-image">
-                <img className="manpower fabric-full-img" src="/images/manpower-banner.jpg" />
+        <section className={`col-md-12 ${styles.cardDiv} `} style={{ padding: ' 0px', marginBottom: '5%' }}>
+            <div className={`col-md-4 ${styles.cardImage} `}>
+                <img className={`${styles.manpower} ${styles.fabricFullImg} `} src="/images/manpower-banner.jpg" />
             </div>
-            <div className="col-md-4 card-image">
-                <img className="manpower fabric-full-img" src="/images/manpower2.jpg" />
+            <div className="col-md-4 cardImage">
+                <img className={`${styles.manpower} ${styles.fabricFullImg} `} src="/images/manpower2.jpg" />
             </div>
-            <div className="col-md-4 card-image">
-                <img className="manpower fabric-full-img" src="/images/imagens-06.png" />
+            <div className="col-md-4 cardImage">
+                <img className={`${styles.manpower} ${styles.fabricFullImg} `} src="/images/imagens-06.png" />
             </div>
         </section>
     )

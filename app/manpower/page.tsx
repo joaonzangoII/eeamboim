@@ -1,6 +1,7 @@
 import React from "react";
-import "@/public/styles/manpower.css"; // Optional CSS file for styling
+import styles from '@/public/styles/manpower.module.css';
 import Manpower from "@/components/manpower";
+import SocialIconsBanner from "@/components/socialIconsBanner";
 
 const ManpowerAndTraining: React.FC = () => {
   const manpowerText = `
@@ -25,11 +26,10 @@ const ManpowerAndTraining: React.FC = () => {
   return (
     <>
       {/* Banner Section */}
-      <section className="container-banner">
-        <img className="banner" src="/images/header/manpower.png" alt="Manpower and Training" />
-
-        <div className="left-tittle">
-          <p className="banner-tittle">
+      <section className={`${styles.containerBanner} `}>
+        <img className={`${styles.banner} `} src="/images/header/manpower.png" alt="Manpower and Training" />
+        <div className={`${styles.leftTittle}`}>
+          <p className={`${styles.bannerTittle}`}>
             <span>MANPOWER AND </span>
             <span>TRAINING</span>
           </p>
@@ -47,17 +47,13 @@ const ManpowerAndTraining: React.FC = () => {
           </div>
         </div>
 
-        <div className="arrows">
-          <div className="col-md-4 arrow-p" style={{ marginLeft: "2%" }}>
+        <div className={`${styles.arrows} `}>
+          <div className={`col-md-4 ${styles.arrowP} `} style={{ marginLeft: "2%" }}>
             <p>Manpower and training</p>
           </div>
         </div>
-        <i className="fas fa-chevron-right right" aria-hidden="true"></i>
-
-        <div className="social-icons-banner">
-          <i className="fab fa-facebook-f icons-banner padding-14" aria-hidden="true"></i>
-          <i className="fab fa-whatsapp icons-banner" aria-hidden="true"></i>
-        </div>
+        <i className={`fas fa-chevron-right ${styles.right} `} aria-hidden="true"></i>
+        <SocialIconsBanner styles={styles} />
       </section>
 
       {/* Intro Section */}
@@ -67,11 +63,11 @@ const ManpowerAndTraining: React.FC = () => {
           padding: "0px",
           marginBottom: "12%",
           marginTop: "5%",
-          height: "256px",
+          // height: "256px",
         }}
       >
-        <section className="col-md-6 intro">
-          <div className="intro-text">
+        <section className={`col-md-6 ${styles.intro} `}>
+          <div className={`col-md-6 ${styles.introText} `}>
             <div className="separator">
               <div className="line"></div>
               <h6>manpower and training</h6>
@@ -79,17 +75,15 @@ const ManpowerAndTraining: React.FC = () => {
           </div>
         </section>
 
-        <section className="col-md-6 intro-section">
-          <div className="intro-description">
+        <section className={`col-md-6 ${styles.introSection} `}>
+          <div className={`col-md-6 ${styles.introDescription} `}>
             <div style={{ fontWeight: 400, color: "#C4C4C4" }} 
               dangerouslySetInnerHTML={{ __html: manpowerText }}
             />
           </div>
         </section>
       </section>
-
-      {/* Card Section */}
-      <Manpower />
+      <Manpower styles={styles} />
     </>
   );
 };

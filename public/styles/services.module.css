@@ -1,0 +1,434 @@
+@media only screen and (min-width: 270px) {
+    .verticalText {
+        display: none;
+    }
+
+    .verticalLine {
+        display: none;
+    }
+
+    .bannerTittle {
+        font-size: 17px;
+    }
+
+    .yardSection {
+        display: none;
+    }
+
+    .shallowAlign {
+        margin: 0 auto;
+        display: table;
+    }
+
+    .arrows {
+        display: none;
+    }
+
+
+    .right {
+        display: none;
+    }
+
+    .left {
+        display: none;
+    }
+
+}
+
+@media only screen and (min-width: 577px) {
+    .introSectionLine{
+        float: left;
+        margin-left: 32%;
+    }
+
+    .imgFluid {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+
+    .bannerTittle {
+        font-size: 36px;
+    }
+
+    .about p {
+        font-size: 15px;
+    }
+
+    .introSectionLine{
+        margin-left: 8%;
+    }
+
+    .arrows {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 877px) {
+    .introDescription {
+        padding-left: 8%;
+    }
+
+    .bannerTittle {
+        font-size: 45px;
+    }
+
+    .arrows {
+        display: inline-block;
+    }
+
+    .left {
+        display: inline-block;
+    }
+
+    .right {
+        display: inline-block;
+    }
+}
+
+@media only screen and (min-width: 991px) {
+    .introDescription {
+        padding-left: 23%;
+    }
+
+    .introTexto {
+        padding-left: 23%;
+    }
+
+    .first-box {
+        margin-left: 11%;
+    }
+
+    .box {
+        width: 20%;
+    }
+
+    .yardSection {
+        display: table;
+    }
+
+    .imgFluid {
+        width: 94%;
+    }
+
+    .left {
+        position: absolute !important;
+        top: 75%;
+        left: 62%;
+        display: inline-block;
+    }
+
+    .right {
+        position: absolute !important;
+        top: 75%;
+        left: 82%;
+        display: inline-block;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .introDescription {
+        padding-left: 10%;
+    }
+
+    .introTexto {
+        padding-left: 14%;
+    }
+
+    .verticalText {
+        display: table;
+    }
+
+    .verticalLine {
+        display: table;
+    }
+}
+
+@media only screen and (min-width: 1230px) {
+    .introDescription {
+        padding-left: 0px;
+    }
+
+    .introTexto {
+        padding-left: 4%;
+    }
+}
+
+@media only screen and (min-width: 1445px) {
+    .verticalYardLine {
+        margin-top: 23%;
+    }
+}
+
+.banner {
+    opacity: 1.8 !important;
+    width: 100%;
+    height: auto;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    display: block;
+    padding-top: 0% !important;
+    padding-left: 0% !important;
+}
+
+.bannerTittle {
+    font-size: 45px;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 6.4px;
+}
+
+.containerBanner {
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+.leftTittle {
+    position: absolute;
+    top: 53%;
+    margin-left: 42%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    text-align: left;
+    font-weight: 800;
+}
+
+.leftTittle,
+.page-body span {
+    display: table;
+}
+
+.padding14 {
+    padding-bottom: 14px;
+}
+
+.iconsBanner {
+    display: block;
+}
+
+.socialIconsBanner {
+    display: grid;
+    position: absolute;
+    top: 53%;
+    left: 96%;
+}
+
+.arrows {
+    position: absolute;
+    top: 73%;
+    left: 64%;
+    width: 22%;
+}
+
+.arrows .fa,
+.fas {
+    font-size: 19px;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+.arrow-p {
+    font-size: 10px;
+    padding-right: 39%;
+}
+
+.quality-text {
+    color: #fff;
+    text-align: left;
+    letter-spacing: 4.8px;
+    color: #ffffff;
+    opacity: 1;
+}
+
+.intro-section {
+    position: relative;
+    color: #858585;
+    font-family: "Montserrat", sans-serif;
+    float: right;
+}
+
+.yardUtilities {
+    padding-top: 13%;
+}
+
+.page-body h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-body h2 span {
+    background: #fff;
+    margin: 0 15px;
+}
+
+.page-body h2:before,
+.page-body h2:after {
+    background: black;
+    height: 2px;
+    flex: 1;
+    content: '';
+}
+
+.page-body h2.left:after {
+    background: none;
+}
+
+.page-body h2.right:before {
+    background: none;
+}
+
+.intro-section {
+    position: relative;
+    color: #858585;
+    font-family: "Montserrat", sans-serif;
+}
+
+.yardUtilities {
+    padding-top: 13%;
+}
+
+.intro {
+    width: 200px;
+    margin-right: 9%;
+    float: right;
+    font-family: "Montserrat", sans-serif;
+}
+
+.introDescription {
+    word-spacing: 8px;
+}
+
+.page-body h1 {
+    letter-spacing: 6.4px;
+    color: #ffffff;
+    font-size: 34px;
+    font-weight: 500;
+    padding-top: 3%;
+}
+
+.verticalYardLine {
+    display: table;
+    left: 3%;
+    float: right;
+    padding-top: 6%;
+    padding-right: 56%;
+    width: 100%;
+}
+
+.verticalLine {
+    border-left: 2px solid #858585;
+    height: 177px;
+    margin-left: 29%;
+}
+
+.verticalText {
+    color: white !important;
+    display: table !important;
+    width: 100% !important;
+    writing-mode: vertical-rl !important;
+    float: right !important;
+    padding-top: 25% !important;
+    padding-right: 81% !important;
+}
+
+.yardImg {
+    float: left;
+    padding-top: 10%;
+}
+
+.yardDesc {
+    display: inline-block;
+}
+
+.yardImg img {
+    height: 350px;
+}
+
+.fabricFullImg {
+    width: 100%;
+    height: 470px;
+    margin-top: 5%;
+}
+
+.about {
+    font-family: "Montserrat", sans-serif;
+    height: 882px;
+}
+
+.about p {
+    font-size: 15px;
+}
+
+.aboutDiv {
+    position: relative;
+    display: contents;
+}
+
+.aboutAside {
+    float: right;
+    padding-right: 15%;
+    color: #858585;
+}
+
+.eeaMarcadeagua {
+    height: 200px;
+}
+
+.eeaMarcadeagua img {
+    padding-top: 24%;
+    width: 97%;
+    position: absolute;
+    opacity: 0.1;
+}
+
+.introTexto {
+    font-family: "Montserrat", sans-serif;
+}
+
+.card {
+    background-color: tomato;
+}
+
+.greyBoxCard {
+    background-color: #EDEDED !important;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.greyBoxCard2 {
+    font-weight: 700 !important;
+    text-align: center !important;
+    font-size: 15px !important;
+}
+
+.greyBoxCard .bottom {
+    width: 100% !important;
+    background-color: #22222266 !important;
+    height: 10px !important;
+    bottom: 0px !important;
+    position: absolute;
+}
+
+.topBoxes {
+    height: 200px;
+    font-weight: 700;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    /*width: 100%;*/
+}
+
+.serviceTitle {
+    padding: 15%;
+}
+.shallowSection {
+    display: table;
+    margin: 0 auto;
+}

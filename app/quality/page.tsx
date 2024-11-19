@@ -1,6 +1,7 @@
 "use client"
 import React from "react";
-import "@/public/styles/quality.css";
+import styles from '@/public/styles/quality.module.css';
+import SocialIconsBanner from "@/components/socialIconsBanner";
 
 const Quality: React.FC = () => {
     const qualityText = `
@@ -16,10 +17,10 @@ const Quality: React.FC = () => {
     `
     return (
         <>
-            <section className="container-banner ">
+            <section className={`${styles.containerBanner} `}>
             <img className="banner" src="/images/header/quality.png" />
-            <div className="left-tittle">
-                <p className="banner-tittle">
+                <div className={`${styles.leftTittle}`}>
+                    <p className={`${styles.bannerTittle}`}>
                     <span>QUALITY, HEALTH, </span>
                     <span>SAFETY AND</span>
                     <span> ENVIRONMENTAL CARE</span>
@@ -35,10 +36,7 @@ const Quality: React.FC = () => {
 
             </div>
             <i className="fas fa-chevron-right right" aria-hidden="true"></i>
-            <div className="social-icons-banner">
-                <i className="fab fa-facebook-f icons-banner padding-14" aria-hidden="true"></i>
-                <i className="fab fa-whatsapp icons-banner" aria-hidden="true"></i>
-            </div>
+            <SocialIconsBanner styles={styles} />
         </section>
         <section className="col-md-12" style={{ padding: '0px', marginTop: '5%', height: '256px'}}>
             <section className="col-md-6 intro">
@@ -50,7 +48,7 @@ const Quality: React.FC = () => {
                 </div>
             </section>
             <section className="col-md-6 intro-section">
-                <div className="intro-description">
+                <div className="introDescription">
                     <div style={{ fontWeight: 400,color: '#C4C4C4',paddingBottom: '5%'}}>
                         <div
                             dangerouslySetInnerHTML={{ __html: qualityText }}

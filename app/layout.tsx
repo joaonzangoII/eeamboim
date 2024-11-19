@@ -41,11 +41,12 @@ export default function RootLayout({
         
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased page-body`}
         data-gr-ext-installed=""
         data-new-gr-c-s-check-loaded="14.1207.0"
       >
         <Menu />
+
         {children}
         <Footer />
       </body>

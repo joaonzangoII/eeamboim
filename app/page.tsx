@@ -1,54 +1,55 @@
 import Image from "next/image";
-import "@/public/styles/home.css"; // Optional CSS file for styling
-                                                                                       
-
+import styles from '@/public/styles/home.module.css';
+import SocialIconsBanner from "@/components/socialIconsBanner";
+                                                                                      
 export default function Home() {
   const introText = `The Estaleiro Atlantico do Amboim (EAA),
-    is a <br id="my-line-break" />
-    shipyard <br id="my-line-break" />
+    is a <br/>
+    shipyard <br/>
     and energy industry in Angola.
-    The manufacturing<br id="my-line-break" />
-    yard is <br id="my-line-break" />
-    located at Praia do Kissonde, Porto Amboim, Kwanza-<br id="my-line-break" />
-    Sul,<br id="my-line-break" />
+    The manufacturing<br/>
+    yard is <br/>
+    located at Praia do Kissonde, Porto Amboim, Kwanza-<br/>
+    Sul,<br/>
     Angola. Specializes in the construction
-    of underwater <br id="my-line-break" />
-    structures and the manufacture of support <br id="my-line-break" />
-    equipment for<br id="my-line-break" />
+    of underwater <br/>
+    structures and the manufacture of support <br/>
+    equipment for<br/>
     the oil and gas industry.`;
 
   const yardUtilitiesText = `<p>
-    Offices (1050 m2) <br id="my-line-break" />
-    Restaurant (300 seats) <br id="my-line-break" />
-    Own satellite connection <br id="my-line-break" />
-    Fuel storage (60m3) <br id="my-line-break" />
-    Fuel purification unit <br id="my-line-break" />
-    E-power plant (8mW) <br id="my-line-break" />
-    2x RO-water plant (160m3/d) <br id="my-line-break" />
-    Anaerobe sewer treatment plant <br id="my-line-break" />
-    Medical facilities with yard hospital (2 beds) <br id="my-line-break" />
-    Ambulance <br id="my-line-break" />
-    Fire fighting truck <br id="my-line-break" />
-    EAATC (Estaleiro Atlântico do Amboim Training <br id="my-line-break" /
-    Centre) capacity 40 trainees <br id="my-line-break" />
-    EAASC (Estaleiro Atlântico do Amboim Safety Centre) <br id="my-line-break" />
-    capacity 16 trainees <br id="my-line-break" />
-    Maintenance building<br id="my-line-break" />
+    Offices (1050 m2) <br/>
+    Restaurant (300 seats) <br/>
+    Own satellite connection <br/>
+    Fuel storage (60m3) <br/>
+    Fuel purification unit <br/>
+    E-power plant (8mW) <br/>
+    2x RO-water plant (160m3/d) <br/>
+    Anaerobe sewer treatment plant <br/>
+    Medical facilities with yard hospital (2 beds) <br/>
+    Ambulance <br/>
+    Fire fighting truck <br/>
+    EAATC (Estaleiro Atlântico do Amboim Training <br/
+    Centre) capacity 40 trainees <br/>
+    EAASC (Estaleiro Atlântico do Amboim Safety Centre) <br/>
+    capacity 16 trainees <br/>
+    Maintenance building<br/>
     Car wash area with oil/water separator
   </p>`
   return (
     <>
-      <section className="container-banner ">
+      <section className={`${styles.containerBanner} `}>
         <Image
           alt="Next.js logo"
-          className="banner"
+          className={`${styles.banner}`}
           src="/images/EEA1.png"
           width={1900}
           height={800}
           // layout="responsive" 
         />
-        <div className="left-tittle">
-          <p className="banner-tittle">
+
+        <div className={`${styles.leftTittle}`}>
+          <p className={`${styles.bannerTittle}`}>
             <span>ESTALEIRO</span>
             <span>ATLÂNTICO</span>
             <span>DO AMBOIM</span>
@@ -59,22 +60,19 @@ export default function Home() {
         <i className="fas fa-chevron-left left" aria-hidden="true"></i>
         <div className="arrows">
           <div className="col-md-2 arrow-p">
-            <p>Introduction <br id="my-line-break" /> to EAA</p>
+            <p>Introduction <br/> to EAA</p>
           </div>
           <div className="col-md-4 arrow-p" style={{ marginLeft: '2%' }}>
-            <p>General <br id="my-line-break" /> Yard Information</p>
+            <p>General <br/> Yard Information</p>
           </div>
         </div>
-        <i className="  fas fa-chevron-right right" aria-hidden="true"></i>
-        <div className="social-icons-banner">
-          <i className="fab fa-facebook-f icons-banner padding-14" aria-hidden="true"></i>
-          <i className="fab fa-whatsapp icons-banner" aria-hidden="true"></i>
-        </div>
+        <i className="fas fa-chevron-right right" aria-hidden="true"></i>
+        <SocialIconsBanner styles={styles} />
       </section>
       <div className="row mt-3">
-        <section className="col-md-5 intro-section-line">
-          <div className="intro">
-            <div className="intro-text">
+        <section className={`col-md-5 ${styles.introSectionLine} `}>
+          <div className={`${styles.intro} `}>
+            <div className={`${styles.introText} `}>
               <div className="separator">
                 <div className="line"></div>
                 <h6>intro</h6>
@@ -83,12 +81,12 @@ export default function Home() {
           </div>
         </section>
         <section className="col-md-7" style={{ float: 'right' }}>
-          <div className="intro-texto" dangerouslySetInnerHTML={{ __html: introText }}></div>
+          <div className={`${styles.introTexto} `} dangerouslySetInnerHTML={{ __html: introText }}></div>
         </section>
       </div>
-      <section className="col-md-12 intro-section" style={{ padding: '0px' }}>
-        <div className="col-md-5 yard-img-div" style={{ padding: '0px' }}>
-          <article className="yard-img">
+      <section className={`col-md-12 ${styles.introSection} `} style={{ padding: '0px' }}>
+        <div className={`col-md-5 ${styles.yardImgDiv} `} style={{ padding: '0px' }}>
+          <article className={`${styles.yardImg} `}>
             <Image
               alt="Next.js logo"
               src="/images/sections/home-section-4.png"
@@ -99,21 +97,21 @@ export default function Home() {
           </article>
         </div>
         <div className="col-md-7" style={{ display: 'table' }}>
-          <div className="intro-description">
-            <span className="vertical-text"> Yard utilities</span>
-            <aside className="yard-desc">
+          <div className={`${styles.introDescription} `}>
+            <span className={`${styles.verticalText} `}> Yard utilities</span>
+            <aside className={`${styles.yardDesc} `}>
               <h1>Our yard </h1>
               <p>
-                150.000 m2 (15 ha), loadbearing 90 t/m2 <br id="my-line-break" />
-                Direct acess to open sea<br id="my-line-break" />
-                Quay 250m, 10.6m water depth<br id="my-line-break" />
-                Quay load 5 t/m2 - 10 t/m2<br id="my-line-break" />
-                Breakwater protection <br id="my-line-break" />
+                150.000 m2 (15 ha), loadbearing 90 t/m2 <br/>
+                Direct acess to open sea<br/>
+                Quay 250m, 10.6m water depth<br/>
+                Quay load 5 t/m2 - 10 t/m2<br/>
+                Breakwater protection <br/>
                 Connected by road transport to Luanda
               </p>
             </aside>
-            <aside className="yard-utilities">
-              <h1> Yard <br id="my-line-break" /> utilities</h1>
+            <aside className={`${styles.yardUtilities} `}>
+              <h1> Yard <br/> utilities</h1>
               <div dangerouslySetInnerHTML={{ __html: yardUtilitiesText }}></div>
             </aside>
           </div>
@@ -122,18 +120,18 @@ export default function Home() {
       <section>
         <Image 
           alt="Next.js logo" 
-          className="img-fluid fabric-full-img" 
+          className={`${styles.imgFluid} ${styles.fabricFullImg}`} 
           src="/images/sections/home-full-section-2.png" 
           width={180}
           height={38}
           // layout="responsive"
         />
       </section>
-      <section className="col-md-12 about">
-        <div className="about-div">
-          <aside className="about-aside">
+      <section className={`col-md-12 ${styles.about}`}>
+        <div className={`${styles.aboutDiv}`}>
+          <aside className={`${styles.aboutAside}`}>
             <div className="row mt-3">
-              <section className="col-md-5 intro-section-line"></section>
+              <section className={`col-md-5 ${styles.introSectionLine}`}></section>
               <section className="col-md-7" style={{ float: 'right' }}>
                 <div className="description">
                   <aside>
@@ -143,9 +141,9 @@ export default function Home() {
               </section>
             </div>
             <div className="row mt-3">
-              <section className="col-md-5 intro-section-line">
-                <div className="intro">
-                  <div className="intro-text">
+              <section className={`col-md-5 ${styles.introSectionLine}`}>
+                <div className={`${styles.intro}`}>
+                  <div className={`${styles.introText}`}>
                     <div className="separator">
                       <div className="line"></div>
                       <h6>VISION, VALUES AND MISSION</h6>
@@ -162,7 +160,7 @@ export default function Home() {
                 </div>
               </section>
             </div>
-            <div className="row mt-3 about-icons">
+            <div className={`row mt-3 ${styles.aboutIcons}`}>
               <section className="col-md-10 col-md-offset-2">
                 <div className="col-md-4">
                   <div className="icon">
@@ -222,7 +220,7 @@ export default function Home() {
           </aside>
         </div>
       </section>
-      <section className="col-md-12 eea-marcadeagua">
+      <section className={`col-md-12 ${styles.eeaMarcadeagua}`}>
         <Image 
           alt="Next.js logo" 
           src="/images/white_logo.png" 

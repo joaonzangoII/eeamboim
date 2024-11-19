@@ -25,9 +25,12 @@ h6,
 .shallow-list {
     color: #C4C4C4;
     font-size: 15px !important;
-    ;
     padding-left: 15px !important;
     padding-inline-start: 15px !important;
+}
+
+span.shallow-list {
+    display: table;
 }
 
 .section-title {

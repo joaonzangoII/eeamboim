@@ -1,0 +1,431 @@
+  @media only screen and (min-width: 270px) {
+      .verticalText {
+          display: none;
+      }
+
+      .verticalLine {
+          display: none;
+      }
+
+      .bannerTittle {
+          font-size: 17px;
+      }
+
+      .arrows {
+          display: none;
+      }
+
+      .left {
+          display: none;
+      }
+
+      .right {
+          display: none;
+      }
+
+      .fabricFullImg {
+          height: auto!important;
+      }
+
+      .eeaMarcadeagua img {
+          /*padding-top: 74%;*/
+      }
+
+  }
+
+@media only screen and (min-width: 577px) {
+    .introSectionLine{
+        float: left;
+        margin-left: 32%;
+    }
+
+    .yardImgDiv {
+        margin: 0px;
+        display: inline;
+    }
+
+    .yardDesc {
+        padding-left: 4%;
+    }
+
+    .yardUtilities {
+        padding-left: 4%;
+    }
+
+    .yardDesc {
+        display: inline-block;
+    }
+
+    .about p {
+        font-size: 11px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+
+    .bannerTittle {
+        font-size: 36px;
+    }
+
+    .about p {
+        font-size: 15px;
+    }
+
+    .introSectionLine{
+        margin-left: 0px;
+    }
+
+    .arrows {
+        display: none;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .left {
+        display: none;
+    }
+
+    .eeaMarcadeagua img {
+        /*padding-top: 70%;*/
+    }
+}
+
+@media only screen and (min-width: 877px) {
+    .introDescription {
+        padding-left: 8%;
+    }
+
+    .bannerTittle {
+        font-size: 45px;
+    }
+
+    .arrows {
+        display: inline-block;
+    }
+
+    .left {
+        display: inline-block;
+    }
+
+    .right {
+        display: inline-block;
+    }
+
+    .eeaMarcadeagua img {
+        /*padding-top: 61%;*/
+    }
+}
+
+@media only screen and (min-width: 991px) {
+    .introDescription {
+        padding-left: 23%;
+    }
+
+    .introTexto {
+        padding-left: 23%;
+    }
+
+    .fabricFullImg {
+        height: 470px;
+    }
+
+    .eeaMarcadeagua img {
+        /*padding-top: 45%;*/
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .introDescription {
+        padding-left: 10%;
+    }
+
+    .introTexto {
+        padding-left: 14%;
+    }
+
+    .verticalText {
+        display: table;
+    }
+
+    .verticalLine {
+        display: table;
+    }
+
+    .eeaMarcadeagua img {
+        /*padding-top: 36%;*/
+    }
+}
+
+@media only screen and (min-width: 1230px) {
+    .introDescription {
+        padding-left: 0px;
+    }
+
+    .introTexto {
+        padding-left: 4%;
+    }
+
+    .eeaMarcadeagua img {
+        /*padding-top: 31%;*/
+    }
+}
+
+@media only screen and (min-width: 1445px) {
+    .verticalYardLine {
+        margin-top: 23%;
+    }
+}
+
+@media screen and (max-width: 552px) {
+    .about {
+        min-height: 650px !important;
+        overflow: auto !important;
+    }
+
+    .eeaMarcadeagua {
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        min-height: 200px !important;
+    }
+}
+
+.banner {
+    opacity: 1.8 !important;
+    width: 100% !important;
+    height: auto !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    position: relative !important;
+    display: block !important;
+    padding-top: 0% !important;
+    padding-left: 0% !important;
+}
+
+.bannerTittle {
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 6.4px;
+}
+
+.containerBanner {
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+.leftTittle {
+    position: absolute;
+    top: 53%;
+    margin-left: 42%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    text-align: left;
+    font-weight: 800;
+}
+
+.leftTittle
+.page-body span {
+    display: table;
+}
+
+.padding14 {
+    padding-bottom: 14px;
+}
+
+.iconsBanner {
+    display: block;
+}
+
+.socialIconsBanner {
+    display: grid;
+    position: absolute;
+    top: 53%;
+    left: 96%;
+}
+
+.quality-text {
+    color: #fff;
+    text-align: left;
+    letter-spacing: 4.8px;
+    color: #ffffff;
+    opacity: 1;
+}
+
+.introText {
+    /*padding-left: 24%;*/
+}
+
+.intro-section {
+    position: relative;
+    color: #858585;
+    font-family: "Montserrat", sans-serif;
+}
+
+.yardUtilities {
+    padding-top: 2%;
+}
+
+
+.page-body h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-body h2 span {
+    background: #fff;
+    margin: 0 15px;
+}
+
+.page-body h2:before,
+.page-body h2:after {
+    background: black;
+    height: 2px;
+    flex: 1;
+    content: '';
+}
+
+.page-body h2.left:after {
+    background: none;
+}
+
+.page-body h2.right:before {
+    background: none;
+}
+
+.introSection {
+    position: relative;
+    color: #858585;
+    font-family: "Montserrat", sans-serif;
+}
+
+.yardUtilities {
+    padding-top: 2%;
+}
+
+.intro {
+    min-width: 200px;
+    max-width: 350px;
+    margin-right: 9%;
+    float: right;
+    font-family: "Montserrat", sans-serif;
+}
+
+.introDescription {
+    word-spacing: 8px;
+    font-size: 15px;
+}
+
+.page-body h1 {
+    letter-spacing: 6.4px;
+    color: #ffffff;
+    font-size: 34px;
+    font-weight: 500;
+    padding-top: 3%;
+}
+
+.verticalYardLine {
+    display: inline-grid;
+    margin-right: -1%;
+    float: right;
+    margin-top: 25%;
+}
+
+.verticalLine {
+    border-left: 2px solid #858585;
+    height: 177px;
+    margin-left: 29%;
+}
+
+.verticalText {
+    writing-mode: vertical-rl;
+    float: right;
+    margin-right: 13%;
+    margin-top: 6%;
+}
+
+.yardImg {
+    float: left;
+    padding-top: 20%;
+}
+
+.yardImg,
+.yardImg img {
+    width: 100%;
+}
+
+.fabricFullImg {
+    width: 100%;
+    margin-top: 5%;
+}
+
+.about {
+    font-family: "Montserrat", sans-serif;
+    min-height: 550px;
+    /*height: 882px;*/
+}
+
+.aboutDiv {
+    position: relative;
+    display: contents;
+}
+
+.aboutAside {
+    float: right;
+    /*padding-right: 15%;*/
+    color: #858585;
+}
+
+.aboutAside .description {
+    padding-left: 10%;
+    padding-right: 20%;
+}
+
+.aboutAside aside {
+    padding-right: 2%;
+}
+
+.eeaMarcadeagua {
+    width: 100%;
+    margin-bottom: 50px;
+    min-height: 600px !important;
+}
+
+.eeaMarcadeagua img {
+    width: 100%;
+    position: absolute;
+    opacity: 0.1;
+}
+
+.introTexto {
+    font-family: "Montserrat", sans-serif;
+}
+
+.aboutIcons {
+    text-align: left;
+}
+
+.aboutIcons {
+    margin-top: 100px;
+}
+
+.aboutIcons .col-md-4 {
+    margin-right: 0%;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.aboutIcons .col-md-4 i,
+.aboutIcons .col-md-4 h4 {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.aboutIcons .col-md-4 .icon,
+.aboutIcons .col-md-4 h4 {
+    margin-bottom: 50px;
+}

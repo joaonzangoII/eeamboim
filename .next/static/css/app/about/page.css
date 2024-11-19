@@ -1,197 +1,202 @@
-/*!*********************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./public/styles/about.css ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./public/styles/about.module.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************/
 @media only screen and (min-width: 270px) {
-    .vertical-text {
+    .about_verticalText__K5bYw {
         display: none;
     }
 
-    .verticalLine {
+    .about_verticalLine__9ua9w {
         display: none;
     }
 
-    .banner-tittle {
+    .about_bannerTittle__zpBk2 {
         font-size: 17px;
     }
 
-    .arrows {
+    .about_arrows__TYRgS {
         display: none;
     }
 
-    .right {
+    .about_right__dB6ZQ {
         display: none;
     }
 
-    .left {
+    .about_left__av0S_ {
         display: none;
     }
 
-    .intro {
+    .about_intro__muVTx {
         width: 30%;
         margin-left: 8%;
     }
 
-    .yard-utilities-div {
+    .about_yardUtilitiesDiv___UpKD {
         display: none;
     }
 
-    .yard-section {
+    .about_yardSection__5TK03 {
         display: none;
     }
 
-    .img-fluid {
+    .about_imgFluid__gwJ_1 {
         width: 100%;
     }
 
-    .section-fabrication {
+    .about_sectionFabrication__6vX4p {
         display: table;
         margin: 0 auto;
     }
 
-    .product-div {
+    .about_productDiv__z1k7M {
         display: table;
         margin: 0 auto;
     }
 
-    .shallow-section {
+    .about_shallowSection__K8ugp {
         display: table;
         margin: 0 auto;
+    }
+
+    .about_shallowAlign__Lbz01 {
+        margin: 0 auto;
+        display: table;
     }
 
 }
 
 @media only screen and (min-width: 577px) {
-    .intro-section-line {
+    .about_introSectionLine__JwPVp{
         float: left;
         margin-left: 32%;
     }
 
-    .img-fluid {
+    .about_imgFluid__gwJ_1 {
         width: 100%;
     }
 }
 
 @media only screen and (min-width: 600px) {
 
-    .banner-tittle {
+    .about_bannerTittle__zpBk2 {
         font-size: 36px;
     }
 
-    .arrows {
+    .about_arrows__TYRgS {
         display: none;
     }
 
-    .intro-section-line {
+    .about_introSectionLine__JwPVp{
         margin-left: 8%;
     }
 }
 
 @media only screen and (min-width: 768px) {
-    .container>.navbar-collapse {
+    .about_container__Jobzt>.about_navbar-collapse__dy70F {
         padding-top: 1%;
     }
 
-    .intro {
+    .about_intro__muVTx {
         width: 30%;
         margin-left: 8%;
     }
 
-    .section-fabrication {
+    .about_sectionFabrication__6vX4p {
         display: inline-block;
     }
 }
 
 @media only screen and (min-width: 877px) {
-    .intro-description {
+    .about_introDescription__hjghB {
         padding-left: 8% ;
     }
 
-    .banner-tittle {
+    .about_bannerTittle__zpBk2 {
         font-size: 45px;
     }
 
-    .arrows {
+    .about_arrows__TYRgS {
         display: inline-block;
     }
 
-    .left {
+    .about_left__av0S_ {
         display: inline-block;
     }
 
-    .right {
+    .about_right__dB6ZQ {
         display: inline-block;
     }
 
-    .intro {
+    .about_intro__muVTx {
         width: 20%;
         margin-left: 20%;
     }
 }
 
 @media only screen and (min-width: 991px) {
-    .intro-description {
+    .about_introDescription__hjghB {
         padding-left: 23%;
     }
 
-    .intro-text {
+    .about_intro-text__dUl7g {
         padding-left: 23%;
     }
 
-    .yard-utilities-div {
+    .about_yardUtilitiesDiv___UpKD {
         display: inline-block;
     }
 
-    .intro-texto {
+    .about_introTexto__WMCgb {
         padding-left: 23%;
     }
 
-    .yard-section {
+    .about_yardSection__5TK03 {
         display: table;
     }
 
-    .img-fluid {
+    .about_imgFluid__gwJ_1 {
         width: 94%;
     }
 
 }
 
 @media only screen and (min-width: 1000px) {
-    .intro-description {
+    .about_introDescription__hjghB {
         padding-left: 10%;
     }
 
-    .intro-text {
+    .about_intro-text__dUl7g {
         padding-left: 14%;
     }
 
-    .vertical-text {
+    .about_verticalText__K5bYw {
         display: table;
     }
 
-    .verticalLine {
+    .about_verticalLine__9ua9w {
         display: table;
     }
 
-    .intro-texto {
+    .about_introTexto__WMCgb {
         padding-left: 14%;
     }
 }
 
 @media only screen and (min-width: 1230px) {
-    .intro-description {
+    .about_introDescription__hjghB {
         padding-left: 0px;
     }
 
-    .intro-texto {
+    .about_introTexto__WMCgb {
         padding-left: 4%;
     }
 }
 
-.intro-texto {
+.about_introTexto__WMCgb {
     font-family: "Montserrat", sans-serif !important;
 }
 
-.banner {
+.about_banner__SdY_P {
     opacity: 1.8;
     width: 100%;
     height: auto;
@@ -201,19 +206,19 @@
     display: block;
 }
 
-.banner-tittle {
+.about_bannerTittle__zpBk2 {
     font-family: "Montserrat", sans-serif;
     letter-spacing: 6.4px;
 }
 
-.container-banner {
+.about_containerBanner__7EJv1 {
     position: relative;
     text-align: center;
     color: white;
     width: 100%;
 }
 
-.left-tittle {
+.about_leftTittle__q0Crv {
     position: absolute;
     top: 53%;
     margin-left: 42%;
@@ -223,62 +228,62 @@
     font-weight: 800;
 }
 
-.left-tittle,
-span {
+.about_leftTittle__q0Crv,
+.about_page-body__zdLWa span {
     display: table;
 }
 
-.padding-14 {
+.about_padding14__eXuok {
     padding-bottom: 14px;
 }
 
-.icons-banner {
+.about_iconsBanner__qvb7b {
     display: block;
 }
 
-.social-icons-banner {
+.about_socialIconsBanner__WkPFV {
     display: grid;
     position: absolute;
     top: 53%;
     left: 96%;
 }
 
-.arrows {
+.about_arrows__TYRgS {
     position: absolute;
     top: 73%;
     left: 64%;
     width: 22%;
 }
 
-.left {
+.about_left__av0S_ {
     position: absolute;
     top: 75%;
     left: 62%;
 }
 
-.right {
+.about_right__dB6ZQ {
     position: absolute;
     top: 75%;
     left: 82%;
 }
 
-.arrows .fa,
-.fa {
+.about_arrows__TYRgS .about_fa__1bQZA,
+.about_fa__1bQZA {
     font-size: 19px;
 }
 
-.bottom-left {
+.about_bottom-left__6fPxI {
     position: absolute;
     bottom: 8px;
     left: 16px;
 }
 
-.arrow-p {
+.about_arrow-p__NFORO {
     font-size: 10px;
     padding-right: 39%;
 }
 
-.quality-text {
+.about_quality-text__iZBfr {
     color: #fff;
     text-align: left;
     letter-spacing: 4.8px;
@@ -286,46 +291,46 @@ span {
     opacity: 1;
 }
 
-.intro-text {
+.about_intro-text__dUl7g {
     padding-left: 24% !important;
 }
 
-.intro-section {
+.about_intro-section__W3fqu {
     position: relative !important;
     color: #858585 !important;;
     font-family: "Montserrat", sans-serif !important;
     float: right !important;
 }
 
-.yard-utilities {
+.about_yardUtilities__aDoB0 {
     padding-top: 13%;
 }
 
 
-h2 {
+.about_page-body__zdLWa h2 {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-h2 span {
+.about_page-body__zdLWa h2 span {
     background: #fff;
     margin: 0 15px;
 }
 
-h2:before,
-h2:after {
+.about_page-body__zdLWa h2:before,
+.about_page-body__zdLWa h2:after {
     background: black;
     height: 2px;
     flex: 1;
     content: '';
 }
 
-h2.left:after {
+.about_page-body__zdLWa h2.about_left__av0S_:after {
     background: none;
 }
 
-h2.right:before {
+.about_page-body__zdLWa h2.about_right__dB6ZQ:before {
     background: none;
 }
 
@@ -335,11 +340,11 @@ h2.right:before {
     font-family: "Montserrat", sans-serif;
 } */
 
-.yard-utilities {
+.about_yardUtilities__aDoB0 {
     padding-top: 13%;
 }
 
-.intro {
+.about_intro__muVTx {
     min-width: 200px !important;
     max-width: 350px !important;
     margin-right: 9%;
@@ -347,11 +352,11 @@ h2.right:before {
     font-family: "Montserrat", sans-serif !important;
 }
 
-.intro-description {
+.about_introDescription__hjghB {
     word-spacing: 8px !important;;
 }
 
-h1 {
+.about_page-body__zdLWa h1 {
     letter-spacing: 6.4px;
     color: #ffffff;
     font-size: 34px;
@@ -359,7 +364,7 @@ h1 {
     padding-top: 3%;
 }
 
-.vertical-yard-line {
+.about_verticalYardLine__8wteU {
     display: table;
     left: 3%;
     float: right;
@@ -368,13 +373,13 @@ h1 {
     width: 100%;
 }
 
-.verticalLine {
+.about_verticalLine__9ua9w {
     border-left: 2px solid #858585;
     height: 177px;
     margin-left: 29%;
 }
 
-.vertical-text {
+.about_verticalText__K5bYw {
     color: white;
     display: table;
     width: 100%;
@@ -383,760 +388,93 @@ h1 {
     padding-right: 81%;
 }
 
-.yard-img {
+.about_yardImg__ERApj {
     float: left;
     padding-top: 10%;
 }
 
-.yard-desc {
+.about_yardDesc__qjkDV {
     display: inline-block;
 }
 
-.yard-img img {
+.about_yardImg__ERApj img {
     height: 350px;
 }
 
-.fabric-full-img {
+.about_fabricFullImg__cMJ4m {
     width: 100%;
     height: 470px;
     margin-top: 5%;
 }
 
-.about {
+.about_about__OYttO {
     font-family: "Montserrat", sans-serif;
     height: 882px;
 }
 
-.about p {
+.about_about__OYttO p {
     font-size: 17px;
 }
 
-.about-div {
+.about_aboutDiv__dbmx5 {
     position: relative;
     display: contents;
 }
 
-.about-aside {
+.about_aboutAside__pzldi {
     float: right;
     padding-right: 15%;
     color: #858585;
 }
 
-.eea-marcadeagua {
+.about_eeaMarcadeagua__kkpST {
     height: 200px !important;
 }
 
-.eea-marcadeagua img {
+.about_eeaMarcadeagua__kkpST img {
     padding-top: 24% !important;
     width: 97% !important;
     position: absolute !important;
     opacity: 0.1 !important;
 }
 
-.card {
-    background-color: tomato;
-}
-/*!************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./public/styles/manpower.css ***!
-  \************************************************************************************************************************************************************************************************************************************************************************/
-@media only screen and (min-width: 270px) {
-    .vertical-text {
-        display: none;
-    }
-
-    .verticalLine {
-        display: none;
-    }
-
-    .banner-tittle {
-        font-size: 17px;
-    }
-
-    .arrows {
-        display: none;
-    }
-
-    .right {
-        display: none;
-    }
-
-    .intro {
-        display: none;
-    }
-
-}
-
-@media only screen and (min-width: 768px) {
-    .container>.navbar-collapse {
-        padding-left: 23%;
-        padding-top: 1%;
-    }
-}
-
-@media only screen and (min-width: 860px) {
-    .intro {
-        display: block;
-    }
-}
-
-@media only screen and (min-width: 1000px) {
-
-    .right {
-        left: 82%;
-        display: inline-block;
-    }
-
-    .arrows {
-        display: inline-block;
-    }
-
-    .banner-tittle {
-        font-size: 36px;
-    }
-}
-
-.banner {
-    opacity: 1.8;
-    width: 100%;
-    height: auto;
-    background-position: center center;
-    background-size: cover;
-    position: relative;
-    display: block;
-}
-
-.banner-tittle {
-
-    font-family: "Montserrat", sans-serif;
-    letter-spacing: 6.4px;
-}
-
-.container-banner {
-    position: relative;
-    text-align: center;
-    color: white;
-    width: 100%;
-}
-
-.left-tittle {
-    position: absolute;
-    top: 53%;
-    margin-left: 42%;
-    transform: translate(-50%, -50%);
-    width: 35%;
-    text-align: left;
-    font-weight: 800;
-}
-
-.left-tittle,
-span {
-    display: table;
-}
-
-.padding-14 {
-    padding-bottom: 14px;
-}
-
-.icons-banner {
-    display: block;
-}
-
-.social-icons-banner {
-    display: grid;
-    position: absolute;
-    top: 53%;
-    left: 96%;
-}
-
-.bottom-left {
-    position: absolute;
-    bottom: 8px;
-    left: 16px;
-}
-
-.arrow-p {
-    font-size: 14px;
-    padding-right: 39%;
-}
-
-.quality-text {
-    color: #fff;
-    text-align: left;
-    letter-spacing: 4.8px;
-    color: #ffffff;
-    opacity: 1;
-}
-
-.intro-section {
-    position: relative;
-    color: #858585;
-    font-family: "Montserrat", sans-serif;
-    float: right !important;
-}
-
-.yard-utilities {
-    padding-top: 13%;
-}
-
-
-h2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-h2 span {
-    background: #fff;
-    margin: 0 15px;
-}
-
-h2:before,
-h2:after {
-    background: black;
-    height: 2px;
-    flex: 1;
-    content: '';
-}
-
-h2.left:after {
-    background: none;
-}
-
-h2.right:before {
-    background: none;
-}
-
-.intro-section {
-    position: relative;
-    color: #858585;
-    font-family: "Montserrat", sans-serif;
-}
-
-.yard-utilities {
-    padding-top: 13%;
-}
-
-.intro {
-    position: absolute !important;
-    width: 20%;
-    margin-left: 20%;
-    font-family: "Montserrat", sans-serif;
-}
-
-.intro-description {
-    word-spacing: 8px;
-}
-
-h1 {
-    letter-spacing: 6.4px;
-    color: #ffffff;
-    font-size: 34px;
-    font-weight: 500;
-    padding-top: 3%;
-}
-
-.vertical-yard-line {
-    display: table;
-    left: 3%;
-    float: right;
-    padding-top: 6%;
-    padding-right: 56%;
-    width: 100%;
-}
-
-.verticalLine {
-    border-left: 2px solid #858585;
-    height: 177px;
-    margin-left: 29%;
-}
-
-.vertical-text {
-    color: white;
-    display: table;
-    width: 100%;
-    writing-mode: vertical-rl;
-    float: right;
-    padding-top: 25%;
-    padding-right: 81%;
-}
-
-.yard-img {
-    float: left;
-    padding-top: 10%;
-}
-
-.yard-desc {
-    display: inline-block;
-}
-
-.yard-img img {
-    height: 350px;
-}
-
-.manpower.fabric-full-img {
-    width: 100%;
-    height: 100%;
-}
-
-.about {
-    font-family: "Montserrat", sans-serif;
-    height: 882px;
-}
-
-.about p {
-    font-size: 17px;
-}
-
-.about-div {
-    position: relative;
-    display: contents;
-}
-
-.about-aside {
-    float: right;
-    padding-right: 15%;
-    color: #858585;
-}
-
-.eea-marcadeagua {
-    height: 200px;
-}
-
-.eea-marcadeagua img {
-    padding-top: 24%;
-    width: 97%;
-    position: absolute;
-    opacity: 0.1;
-}
-
-.card {
+.about_card__vzSh1 {
     background-color: tomato;
 }
 
-.card-image {
-    padding: 0px;
-    height: 250px;
-}
-
-.card-div {
-    padding: 0px;
-    height: 100%;
-}
-/*!************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./public/styles/services.css ***!
-  \************************************************************************************************************************************************************************************************************************************************************************/
-@media only screen and (min-width: 270px) {
-    .vertical-text {
-        display: none;
-    }
-
-    .verticalLine {
-        display: none;
-    }
-
-    .banner-tittle {
-        font-size: 17px;
-    }
-
-    .yard-section {
-        display: none;
-    }
-
-    .shallow-align {
-        margin: 0 auto;
-        display: table;
-    }
-
-    .arrows {
-        display: none;
-    }
-
-
-    .right {
-        display: none;
-    }
-
-    .left {
-        display: none;
-    }
-
-}
-
-@media only screen and (min-width: 577px) {
-    .intro-section-line {
-        float: left;
-        margin-left: 32%;
-    }
-
-    .img-fluid {
-        width: 100%;
-    }
-}
-
-@media only screen and (min-width: 600px) {
-
-    .banner-tittle {
-        font-size: 36px;
-    }
-
-    .about p {
-        font-size: 15px;
-    }
-
-    .intro-section-line {
-        margin-left: 8%;
-    }
-
-    .arrows {
-        display: none;
-    }
-}
-
-@media only screen and (min-width: 877px) {
-    .intro-description {
-        padding-left: 8%;
-    }
-
-    .banner-tittle {
-        font-size: 45px;
-    }
-
-    .arrows {
-        display: inline-block;
-    }
-
-    .left {
-        display: inline-block;
-    }
-
-    .right {
-        display: inline-block;
-    }
-}
-
-@media only screen and (min-width: 991px) {
-    .intro-description {
-        padding-left: 23%;
-    }
-
-    .intro-texto {
-        padding-left: 23%;
-    }
-
-    .first-box {
-        margin-left: 11%;
-    }
-
-    .box {
-        width: 20%;
-    }
-
-    .yard-section {
-        display: table;
-    }
-
-    .img-fluid {
-        width: 94%;
-    }
-
-    .left {
-        position: absolute !important;
-        top: 75%;
-        left: 62%;
-        display: inline-block;
-    }
-
-    .right {
-        position: absolute !important;
-        top: 75%;
-        left: 82%;
-        display: inline-block;
-    }
-}
-
-@media only screen and (min-width: 1000px) {
-    .intro-description {
-        padding-left: 10%;
-    }
-
-    .intro-texto {
-        padding-left: 14%;
-    }
-
-    .vertical-text {
-        display: table;
-    }
-
-    .verticalLine {
-        display: table;
-    }
-}
-
-@media only screen and (min-width: 1230px) {
-    .intro-description {
-        padding-left: 0px;
-    }
-
-    .intro-texto {
-        padding-left: 4%;
-    }
-}
-
-@media only screen and (min-width: 1445px) {
-    .vertical-yard-line {
-        margin-top: 23%;
-    }
-}
-
-.banner {
-    opacity: 1.8;
-    width: 100%;
-    height: auto;
-    background-position: center center;
-    background-size: cover;
-    position: relative;
-    display: block;
-}
-
-.banner-tittle {
-    font-size: 45px;
-    font-family: "Montserrat", sans-serif;
-    letter-spacing: 6.4px;
-}
-
-.container-banner {
-    position: relative;
-    text-align: center;
-    color: white;
-    width: 100%;
-}
-
-.left-tittle {
-    position: absolute;
-    top: 53%;
-    margin-left: 42%;
-    transform: translate(-50%, -50%);
-    width: 35%;
-    text-align: left;
-    font-weight: 800;
-}
-
-.left-tittle,
-span {
-    display: table;
-}
-
-.padding-14 {
-    padding-bottom: 14px;
-}
-
-.icons-banner {
-    display: block;
-}
-
-.social-icons-banner {
-    display: grid;
-    position: absolute;
-    top: 53%;
-    left: 96%;
-}
-
-.arrows {
-    position: absolute;
-    top: 73%;
-    left: 64%;
-    width: 22%;
-}
-
-.arrows .fa,
-.fas {
-    font-size: 19px;
-}
-
-.bottom-left {
-    position: absolute;
-    bottom: 8px;
-    left: 16px;
-}
-
-.arrow-p {
-    font-size: 10px;
-    padding-right: 39%;
-}
-
-.quality-text {
-    color: #fff;
-    text-align: left;
-    letter-spacing: 4.8px;
-    color: #ffffff;
-    opacity: 1;
-}
-
-.intro-section {
-    position: relative;
-    color: #858585;
-    font-family: "Montserrat", sans-serif;
-    float: right;
-}
-
-.yard-utilities {
-    padding-top: 13%;
-}
-
-h2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-h2 span {
-    background: #fff;
-    margin: 0 15px;
-}
-
-h2:before,
-h2:after {
-    background: black;
-    height: 2px;
-    flex: 1;
-    content: '';
-}
-
-h2.left:after {
-    background: none;
-}
-
-h2.right:before {
-    background: none;
-}
-
-.intro-section {
-    position: relative;
-    color: #858585;
-    font-family: "Montserrat", sans-serif;
-}
-
-.yard-utilities {
-    padding-top: 13%;
-}
-
-.intro {
-    width: 200px;
-    margin-right: 9%;
-    float: right;
-    font-family: "Montserrat", sans-serif;
-}
-
-.intro-description {
-    word-spacing: 8px;
-}
-
-h1 {
-    letter-spacing: 6.4px;
-    color: #ffffff;
-    font-size: 34px;
-    font-weight: 500;
-    padding-top: 3%;
-}
-
-.vertical-yard-line {
-    display: table;
-    left: 3%;
-    float: right;
-    padding-top: 6%;
-    padding-right: 56%;
-    width: 100%;
-}
-
-.verticalLine {
-    border-left: 2px solid #858585;
-    height: 177px;
-    margin-left: 29%;
-}
-
-.vertical-text {
-    color: white !important;
-    display: table !important;
-    width: 100% !important;
-    writing-mode: vertical-rl !important;
-    float: right !important;
-    padding-top: 25% !important;
-    padding-right: 81% !important;
-}
-
-.yard-img {
-    float: left;
-    padding-top: 10%;
-}
-
-.yard-desc {
-    display: inline-block;
-}
-
-.yard-img img {
-    height: 350px;
-}
-
-.fabric-full-img {
-    width: 100%;
-    height: 470px;
-    margin-top: 5%;
-}
-
-.about {
-    font-family: "Montserrat", sans-serif;
-    height: 882px;
-}
-
-.about p {
-    font-size: 15px;
-}
-
-.about-div {
-    position: relative;
-    display: contents;
-}
-
-.about-aside {
-    float: right;
-    padding-right: 15%;
-    color: #858585;
-}
-
-.eea-marcadeagua {
-    height: 200px;
-}
-
-.eea-marcadeagua img {
-    padding-top: 24%;
-    width: 97%;
-    position: absolute;
-    opacity: 0.1;
-}
-
-.intro-texto {
-    font-family: "Montserrat", sans-serif;
-}
-
-.grey-box-card {
+.about_greyBoxCard__t8w7U {
     background-color: #EDEDED !important;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
 }
 
-.grey-box-card-2 {
+.about_greyBoxCard2__ERsdo {
     font-weight: 700 !important;
     text-align: center !important;
     font-size: 15px !important;
 }
 
-.grey-box-card .bottom {
+.about_greyBoxCard__t8w7U .about_bottom__TLWbU {
     width: 100% !important;
     background-color: #22222266 !important;
     height: 10px !important;
+    bottom: 0px !important;
+    position: absolute;
 }
 
-.top-boxes {
+.about_shallowSection__K8ugp {
+    display: table;
+    margin: 0 auto;
+}
+
+.about_introSection__bgQvL {
+    position: relative;
+    color: #858585;
+    font-family: "Montserrat", sans-serif;
+    float: right !important;
+}
+
+.about_topBoxes__9XsKy {
     height: 200px;
     font-weight: 700;
     margin-bottom: 5%;
@@ -1144,6 +482,6 @@ h1 {
     /*width: 100%;*/
 }
 
-.service-title {
+.about_serviceTitle__M5n1W {
     padding: 15%;
 }

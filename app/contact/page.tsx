@@ -1,7 +1,8 @@
 "use client"
 import React, { useState } from "react";
-import "@/public/styles/contact.css";
+import styles from '@/public/styles/contact.module.css';
 import axios from "axios";
+import SocialIconsBanner from "@/components/socialIconsBanner";
 
 const Contact: React.FC = () => {
     const API_HOST_URL = "http://localhost:3333/api/";
@@ -52,37 +53,32 @@ const Contact: React.FC = () => {
     };
 
     return (
-        <div>
-            <section className="container">
-                <img className="banner" src="images/EAA_waves-02.svg" alt="Banner" />
-
-                <div className="left-tittle">
-                    <p className="banner-tittle">
+        <>
+            <section className={`container ${styles.container} `}>
+                <img className={`${styles.banner} `} src="images/EAA_waves-02.svg" alt="Banner" />
+                <div className={`${styles.leftTittle}`}>
+                    <p className={`${styles.bannerTittle}`}>
                         <span>GET</span>
                         <span>IN</span>
                         <span>TOUCH</span>
                     </p>
                 </div>
-
-                <div className="social-icons-banner">
-                    <i className="fab fa-facebook-f icons-banner padding-14" aria-hidden="true"></i>
-                    <i className="fab fa-whatsapp icons-banner" aria-hidden="true"></i>
-                </div>
+                <SocialIconsBanner styles={styles} />
             </section>
 
-            <section className="contact-section-form">
+            <section className={`${styles.contactSectionForm} `} >
                 {alert && (
                     <div id="alert" className={`alert alert-${alert.type}`} role="alert">
                         {alert.message}
                     </div>
                 )}
-                <form id="contact-form" className="contact-form" onSubmit={handleSubmit}>
+                <form id="contact-form" className={`contact-form  `} onSubmit={handleSubmit}>
                     <div>
                         <span className="label">NAME</span>
                         <input
                             id="name"
                             type="text"
-                            className="input"
+                            className={`${styles.input} `}
                             value={formData.name}
                             onChange={handleChange}
                         />
@@ -93,7 +89,7 @@ const Contact: React.FC = () => {
                         <input
                             id="email"
                             type="text"
-                            className="input"
+                            className={`${styles.input} `}
                             value={formData.email}
                             onChange={handleChange}
                         />
@@ -104,7 +100,7 @@ const Contact: React.FC = () => {
                         <input
                             id="subject"
                             type="text"
-                            className="input"
+                            className={`${styles.input} `}
                             value={formData.subject}
                             onChange={handleChange}
                         />
@@ -116,20 +112,20 @@ const Contact: React.FC = () => {
                             id="message"
                             rows={10}
                             cols={50}
-                            className="textarea"
+                            className={`${styles.textarea} `}
                             value={formData.message}
                             onChange={handleChange}
                         ></textarea>
                     </div>
 
                     <div style={{ float: "right" }}>
-                        <button id="submit" className="btn-submit" type="submit">
+                        <button id="submit" className={`${styles.btnSubmit} `} type="submit">
                             Submit
                         </button>
                     </div>
                 </form>
             </section>
-        </div>
+        </>
     );
 };
 
