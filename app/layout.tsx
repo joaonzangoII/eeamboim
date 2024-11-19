@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "@/public/styles/globals.css";
 import Menu from '@/components/menu';
 import Footer from '@/components/footer';
+import Script from 'next/script';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,9 +35,9 @@ export default function RootLayout({
         <link rel="stylesheet" type="text/css" href="/css/footer.css" />
         <link rel="stylesheet" type="text/css" href="/css/home/banner-icons.css" />
         <link rel="stylesheet" type="text/css" href="/css/menu.css" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <script src="/js/fontawesome.js"></script>
+        <Script src="/js/jquery.min.js" strategy="lazyOnload" />
+        <Script src="/js/bootstrap.min.js" strategy="lazyOnload" />
+        <Script src="/js/fontawesome.js" strategy="lazyOnload" />
         
       </head>
       <body

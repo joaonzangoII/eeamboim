@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import Image from "next/image";
+import React from "react";
+// import Image from "next/image";
 import "@/public/styles/about.css";
 import "@/public/styles/manpower.css";
 import "@/public/styles/services.css";

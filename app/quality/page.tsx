@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from "react";
+import React from "react";
 import "@/public/styles/quality.css";
 
 const Quality: React.FC = () => {
