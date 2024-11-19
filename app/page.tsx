@@ -1,5 +1,6 @@
 import Image from "next/image";
-                                                                                         
+import "@/public/styles/home.css"; // Optional CSS file for styling
+                                                                                       
 
 export default function Home() {
   const introText = `The Estaleiro Atlantico do Amboim (EAA),

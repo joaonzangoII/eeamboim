@@ -35,9 +35,9 @@ export default function RootLayout({
         <link rel="stylesheet" type="text/css" href="/css/footer.css" />
         <link rel="stylesheet" type="text/css" href="/css/home/banner-icons.css" />
         <link rel="stylesheet" type="text/css" href="/css/menu.css" />
-        <Script src="/js/jquery.min.js" strategy="lazyOnload" />
-        <Script src="/js/bootstrap.min.js" strategy="lazyOnload" />
-        <Script src="/js/fontawesome.js" strategy="lazyOnload" />
+        <Script src="/js/jquery.min.js" />
+        <Script src="/js/bootstrap.min.js" />
+        <Script src="/js/fontawesome.js" />
         
       </head>
       <body
