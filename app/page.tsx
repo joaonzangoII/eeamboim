@@ -43,6 +43,9 @@ const Home: React.FC = () => {
     </ul>
   `
 
+  const missionVisionText = `
+  The Vision, Values and Mission of EAA, LDA materialize the company's ambition to be a reference in society, contributing decisively to the development of the oil sector and other markets.
+  `
 
   return (
     <>
@@ -149,10 +152,7 @@ const Home: React.FC = () => {
               </section>
               <section className="col-md-7" style={{ float: 'right' }}>
                 <div className="description">
-                  <p>
-                    The Vision, Values and Mission of EAA, LDA materialize the company's ambition to
-                    be a reference in society, contributing decisively to the development of the oil sector and other markets.
-                  </p>
+                  {missionVisionText}
                 </div>
               </section>
             </div>

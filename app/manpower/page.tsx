@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import styles from '@/public/styles/manpower.module.css';
 import Manpower from "@/app/components/manpower";
@@ -6,7 +7,6 @@ import { useTranslation } from 'next-i18next';
 
 const ManpowerAndTraining: React.FC = () => {
   const { t } = useTranslation();
-
   const manpowerText = `
     We have a training school where fabricators and <br />
     welders are trained and qualified. The training includes <br />

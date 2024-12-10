@@ -2,11 +2,9 @@
 import Link from 'next/link';
 import LanguageSwitcher from './languageSwitcher';
 import { useTranslation } from 'react-i18next';
-import { useParams } from 'next/navigation';
 
 const Menu: React.FC= () => {
     const { t } = useTranslation(); // Hook to access translations
-    const { locale } = useParams(); // Get the current locale from the URL
     const menuItems = [
         { label: t('home'), path: '/' },
         { label: t('about_us'), path: '/about' },

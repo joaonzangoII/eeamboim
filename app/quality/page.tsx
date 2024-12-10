@@ -21,7 +21,7 @@ const Quality: React.FC = () => {
     return (
         <>
             <section className={`${styles.containerBanner} `}>
-            <img className="banner" src="/images/header/quality.png" />
+                <img className="banner" src="/images/header/quality.png" />
                 <div className={`${styles.leftTittle}`}>
                     <p className={`${styles.bannerTittle}`}>
                         <span>{t('quality_health_safety_and_environmental_care')}</span>
