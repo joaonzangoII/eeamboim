@@ -127,7 +127,7 @@
 }
 
 .arrowP {
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .qualityText {
@@ -315,13 +315,13 @@
 }
 
 .input,
-.page-body textarea {
+.textarea {
     opacity: 0.3;
     color: white;
 }
 
 .input.error,
-.page-body textarea.error {
+.textarea.error {
     border: solid 1px;
     border-color: #d95055;
     border-radius: 3px 0 0 3px;
@@ -329,4 +329,9 @@
 
 .page-body input:-internal-autofill-selected {
     background-color: #707070 !important;
+}
+
+.bannerTittle span,
+.findOutMore {
+    text-transform: uppercase;
 }

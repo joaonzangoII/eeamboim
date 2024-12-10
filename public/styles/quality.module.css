@@ -120,8 +120,8 @@
     left: 16px;
 }
 
-.arrow-p {
-    font-size: 15px;
+.arrowP {
+    font-size: 14px;
 }
 
 .quality-text {
@@ -136,7 +136,7 @@
     padding-left: 24%;
 }
 
-.intro-section {
+.introSection {
     position: relative;
     color: #858585;
     font-family: "Montserrat", sans-serif;
@@ -175,7 +175,7 @@
     background: none;
 }
 
-.intro-section {
+.introSection {
     position: relative;
     color: #858585;
     font-family: "Montserrat", sans-serif;
@@ -297,4 +297,9 @@
 
 .page-body footer {
     padding-top: 37%;
+}
+
+.bannerTittle span,
+.findOutMore {
+    text-transform: uppercase;
 }

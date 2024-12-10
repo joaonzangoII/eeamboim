@@ -1,9 +1,12 @@
 "use client"
 import React from "react";
 import styles from '@/public/styles/quality.module.css';
-import SocialIconsBanner from "@/components/socialIconsBanner";
+import SocialIconsBanner from "@/app/components/socialIconsBanner";
+import { useTranslation } from 'next-i18next';
 
 const Quality: React.FC = () => {
+    const { t } = useTranslation();
+
     const qualityText = `
     Estaleiro Atlântico do Amboim operates an integrated <br/>
     management system incorporating <br/>
@@ -21,21 +24,20 @@ const Quality: React.FC = () => {
             <img className="banner" src="/images/header/quality.png" />
                 <div className={`${styles.leftTittle}`}>
                     <p className={`${styles.bannerTittle}`}>
-                    <span>QUALITY, HEALTH, </span>
-                    <span>SAFETY AND</span>
-                    <span> ENVIRONMENTAL CARE</span>
-                </p>
+                        <span>{t('quality_health_safety_and_environmental_care')}</span>
+                    </p>
                 <i className="fas fa-play-circle" aria-hidden="true"></i>
-                <p style={{ display: 'inline-block', paddingLeft: '2%',fontWeight: 500}}> FIND OUT MORE</p>
+                <p className={`${styles.findOutMore} `}  style={{ display: 'inline-block', paddingLeft: '2%',fontWeight: 500}}> 
+                    {t('find_out_more')}
+                </p>
             </div>
 
             <div className="arrows">
-                <div className="col-md-8 arrow-p" style={{ marginLeft: '2%'}}>
-                    <p>Quality, health, safety and environmental care</p>
+                <div className={`col-md-6 ${styles.arrowP} `}>
+                    <p>{t('quality_health_safety_and_environmental_care')}</p>
                 </div>
-
             </div>
-            <i className="fas fa-chevron-right right" aria-hidden="true"></i>
+            <i className={`fas fa-chevron-right ${styles.right} `} aria-hidden="true"></i>
             <SocialIconsBanner styles={styles} />
         </section>
         <section className="col-md-12" style={{ padding: '0px', marginTop: '5%', height: '256px'}}>
@@ -43,12 +45,12 @@ const Quality: React.FC = () => {
                 <div className="intro-text">
                     <div className="separator">
                         <div className="line"></div>
-                        <h6>quality, health, <br /> safety and <br /> environmental care </h6>
+                        <h6>{t('quality_health_safety_and_environmental_care')} </h6>
                     </div>
                 </div>
             </section>
-            <section className="col-md-6 intro-section">
-                <div className="introDescription">
+            <section className={`col-md-6 ${styles.introSection} `}>
+                <div className={`${styles.introDescription} `}>
                     <div style={{ fontWeight: 400,color: '#C4C4C4',paddingBottom: '5%'}}>
                         <div
                             dangerouslySetInnerHTML={{ __html: qualityText }}

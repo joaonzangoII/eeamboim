@@ -167,12 +167,6 @@
     background: none;
 }
 
-.introSection {
-    position: relative;
-    color: #858585;
-    font-family: "Montserrat", sans-serif;
-}
-
 .yardUtilities {
     padding-top: 13%;
 }
@@ -282,4 +276,9 @@
 .cardDiv {
     padding: 0px;
     height: 100%;
+}
+
+.bannerTittle span,
+.findOutMore {
+    text-transform: uppercase;
 }

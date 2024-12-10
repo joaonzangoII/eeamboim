@@ -2,11 +2,12 @@
 import React, { useState } from "react";
 import styles from '@/public/styles/contact.module.css';
 import axios from "axios";
-import SocialIconsBanner from "@/components/socialIconsBanner";
+import SocialIconsBanner from "@/app/components/socialIconsBanner";
+import { useTranslation } from 'next-i18next';
 
 const Contact: React.FC = () => {
-    const API_HOST_URL = "http://localhost:3333/api/";
-
+    const { t } = useTranslation();
+    const API_HOST_URL = process.env.API_HOST_URL;
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -25,9 +26,9 @@ const Contact: React.FC = () => {
 
     const handleValidation = (element: HTMLInputElement | HTMLTextAreaElement) => {
         if (!element.value) {
-            element.classList.add("error");
+            element.classList.add(styles.error);
         } else {
-            element.classList.remove("error");
+            element.classList.remove(styles.error);
         }
     };
 
@@ -42,7 +43,7 @@ const Contact: React.FC = () => {
 
         if (name && email && subject && message) {
             try {
-                const response = await axios.post(`${API_HOST_URL}contact`, { name, email, subject, message });
+                const response = await axios.post(`${API_HOST_URL}/contact`, { name, email, subject, message });
                 console.log(response.data);
                 setAlert({ type: "success", message: "Message successfully sent." });
             } catch (error) {
@@ -55,12 +56,10 @@ const Contact: React.FC = () => {
     return (
         <>
             <section className={`container ${styles.container} `}>
-                <img className={`${styles.banner} `} src="images/EAA_waves-02.svg" alt="Banner" />
+                <img className={`${styles.banner} `} src="/images/EAA_waves-02.svg" alt="Banner" />
                 <div className={`${styles.leftTittle}`}>
                     <p className={`${styles.bannerTittle}`}>
-                        <span>GET</span>
-                        <span>IN</span>
-                        <span>TOUCH</span>
+                        <span className={`${styles.findOutMore} `}>{t('get_in_touch')}</span>
                     </p>
                 </div>
                 <SocialIconsBanner styles={styles} />
@@ -74,7 +73,7 @@ const Contact: React.FC = () => {
                 )}
                 <form id="contact-form" className={`contact-form  `} onSubmit={handleSubmit}>
                     <div>
-                        <span className="label">NAME</span>
+                        <span className="label">{t('name')}</span>
                         <input
                             id="name"
                             type="text"
@@ -85,7 +84,7 @@ const Contact: React.FC = () => {
                     </div>
 
                     <div>
-                        <span className="label">EMAIL</span>
+                        <span className="label">{t('email')}</span>
                         <input
                             id="email"
                             type="text"
@@ -96,7 +95,7 @@ const Contact: React.FC = () => {
                     </div>
 
                     <div>
-                        <span className="label">SUBJECT</span>
+                        <span className="label">{t('subject')}</span>
                         <input
                             id="subject"
                             type="text"
@@ -107,7 +106,7 @@ const Contact: React.FC = () => {
                     </div>
 
                     <div>
-                        <span className="label">MESSAGE</span>
+                        <span className="label">{t('message')}</span>
                         <textarea
                             id="message"
                             rows={10}
@@ -120,7 +119,7 @@ const Contact: React.FC = () => {
 
                     <div style={{ float: "right" }}>
                         <button id="submit" className={`${styles.btnSubmit} `} type="submit">
-                            Submit
+                            {t('submit')}
                         </button>
                     </div>
                 </form>

@@ -1,9 +1,12 @@
 import React from "react";
 import styles from '@/public/styles/manpower.module.css';
-import Manpower from "@/components/manpower";
-import SocialIconsBanner from "@/components/socialIconsBanner";
+import Manpower from "@/app/components/manpower";
+import SocialIconsBanner from "@/app/components/socialIconsBanner";
+import { useTranslation } from 'next-i18next';
 
 const ManpowerAndTraining: React.FC = () => {
+  const { t } = useTranslation();
+
   const manpowerText = `
     We have a training school where fabricators and <br />
     welders are trained and qualified. The training includes <br />
@@ -30,26 +33,26 @@ const ManpowerAndTraining: React.FC = () => {
         <img className={`${styles.banner} `} src="/images/header/manpower.png" alt="Manpower and Training" />
         <div className={`${styles.leftTittle}`}>
           <p className={`${styles.bannerTittle}`}>
-            <span>MANPOWER AND </span>
-            <span>TRAINING</span>
+            <span>{t('manpower_and_training')}</span>
           </p>
           <div style={{ display: "flex", alignItems: "center" }}>
             <i className="fas fa-play-circle" aria-hidden="true"></i>
             <p
+              className={`${styles.findOutMore} `}
               style={{
                 display: "inline-block",
                 paddingLeft: "2%",
                 fontWeight: 500,
               }}
             >
-              FIND OUT MORE
+              {t('find_out_more')}
             </p>
           </div>
         </div>
 
         <div className={`${styles.arrows} `}>
-          <div className={`col-md-4 ${styles.arrowP} `} style={{ marginLeft: "2%" }}>
-            <p>Manpower and training</p>
+          <div className={`col-md-6 ${styles.arrowP} `}>
+            <p>{t('manpower_and_training')}</p>
           </div>
         </div>
         <i className={`fas fa-chevron-right ${styles.right} `} aria-hidden="true"></i>
@@ -70,7 +73,7 @@ const ManpowerAndTraining: React.FC = () => {
           <div className={`col-md-6 ${styles.introText} `}>
             <div className="separator">
               <div className="line"></div>
-              <h6>manpower and training</h6>
+              <h6>{t('manpower_and_training')}</h6>
             </div>
           </div>
         </section>

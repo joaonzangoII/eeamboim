@@ -135,7 +135,7 @@
         padding-left: 23%;
     }
 
-    .intro-text {
+    .introText {
         padding-left: 23%;
     }
 
@@ -162,7 +162,7 @@
         padding-left: 10%;
     }
 
-    .intro-text {
+    .introText {
         padding-left: 14%;
     }
 
@@ -269,18 +269,18 @@
     font-size: 19px;
 }
 
-.bottom-left {
+.bottomLeft {
     position: absolute;
     bottom: 8px;
     left: 16px;
 }
 
-.arrow-p {
-    font-size: 10px;
+.arrowP {
+    font-size: 14px;
     padding-right: 39%;
 }
 
-.quality-text {
+.qualityText {
     color: #fff;
     text-align: left;
     letter-spacing: 4.8px;
@@ -288,11 +288,11 @@
     opacity: 1;
 }
 
-.intro-text {
+.introText {
     padding-left: 24% !important;
 }
 
-.intro-section {
+.introSection {
     position: relative !important;
     color: #858585 !important;;
     font-family: "Montserrat", sans-serif !important;
@@ -481,4 +481,8 @@
 
 .serviceTitle {
     padding: 15%;
+}
+
+.bannerTittle span, .findOutMore {
+    text-transform: uppercase;
 }

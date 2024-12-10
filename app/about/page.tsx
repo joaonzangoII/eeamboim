@@ -3,16 +3,25 @@ import React, { useEffect, useRef } from "react";
 // import Image from "next/image";
 import styles from '@/public/styles/about.module.css';
 import stylesManPower from '@/public/styles/about.module.css';
-
+import { useTranslation } from 'next-i18next';
+import Manpower from "@/app/components/manpower";
+import SocialIconsBanner from "@/app/components/socialIconsBanner";
+import ServiceCard from "@/app/components/serviceCard";
 // import "@/public/styles/services.module.css";
-import Manpower from "@/components/manpower";
-import SocialIconsBanner from "@/components/socialIconsBanner";
-import ServiceCard from "@/components/serviceCard";
 
 const About: React.FC = () => {
+    const { t } = useTranslation();
     const cardRefs: any = useRef([]);
 
-
+    const introTexto = `
+        In our yard, state of art technologies are utilized for
+        manufacturing support. Specific design and drawing
+        software, as well as Matrix
+        for material traceability and primavera for planning, are
+        combined with modules developed in-house for a bespoke
+        fit to all our
+        projects and requirements
+    `
     useEffect(() => {
         const maxHeight = Math.max(...cardRefs.current.map((card: any) => card.offsetHeight));
         cardRefs.current.forEach((card: any) => {
@@ -23,55 +32,46 @@ const About: React.FC = () => {
     return (
         <>
             <section className={`${styles.containerBanner} `}>
-                <img className={`${styles.banner} `} src="/images/header/ourtech.png" />
+                <img className={`${styles.banner} `} src="/images/EAA LDA (5 de 32).jpg" />
                 <div className={`${styles.leftTittle}`}>
                     <p className={`${styles.bannerTittle}`}>
-                        <span>OUR</span>
-                        <span>TECHNOLOGY</span>
+                        <span>{t('our_technology')}</span>
                     </p>
                     <i className="fa fa-play-circle" aria-hidden="true"></i>
-                    <p style={{ display: 'inline-block', paddingLeft: '2%', fontWeight: '500' }}>
-                        FIND OUT MORE
-                    </p>
+                    <a className={`${styles.findOutMore} `}  style={{ display: 'inline-block', paddingLeft: '2%', fontWeight: '500' }}>
+                        {t('find_out_more')}
+                    </a>
                 </div>
                 <i className={`fa fa-chevron-left ${styles.left} `} aria-hidden="true"></i>
                 <div className={`${styles.arrows} `}>
-                    <div className={`col-md-2 ${styles.arrowP} `}>
-                        <p>Fabrication facilities</p>
+                    <div className={`col-md-6 ${styles.arrowP} `}>
+                        <p>{t('fabrication_facilities')}</p>
                     </div>
 
                     <div className={`col-md-4 ${styles.arrowP} `} style={{ marginLeft: '2%' }}>
-                        <p>Production equipment</p>
+                        <p>{t('production_equipment')}</p>
                     </div>
-
                 </div>
                 <i className={`fa fa-chevron-right ${styles.right} `} aria-hidden="true"></i>
                 <SocialIconsBanner styles={styles} />
             </section>
             <section>
                 <section className="col-md-12">
-                    <aside className="col-md-5 intro-section-line">
-                        <div className="intro">
-                            <div className="intro-text">
+                    <div className={`col-md-5 ${styles.introSectionLine} `} >
+                        <div className={`${styles.intro} `}>
+                            <div className={`${styles.introText} `}>
                                 <div className="separator">
                                     <div className="line"></div>
-                                    <h6>our technology</h6>
+                                    <h6>{t('our_technology')}</h6>
                                 </div>
                             </div>
                         </div>
-                    </aside>
-
-                    <aside className="col-md-6" style={{ float: 'right' }}>
-                        <p className="introTexto">
-                            In our yard, state of art technologies are utilized for<br />
-                            manufacturing support. Specific design and drawing<br />
-                            software, as well as Matrix<br />
-                            for material traceability and primavera for planning, are <br />
-                            combined with modules developed in-house for a bespoke <br />
-                            fit to all our <br />
-                            projects and requirements
-                        </p>
-                    </aside>
+                    </div>
+                    <div className="col-md-6" style={{ float: 'right' }}>
+                        <div className={`${styles.introTexto} `}>
+                            {introTexto}
+                        </div>
+                    </div>
                 </section>
 
                 <section className="col-md-12" style={{ padding: '0px', paddingTop: '4%' }}>
@@ -79,31 +79,28 @@ const About: React.FC = () => {
                         <img className={`${styles.imgFluid} float-left`}  src="/images/Image 7.png" />
                     </div>
                     <div className="col-md-4">
-                        <h3 className={`${styles.sectionTitle} `}>
-                            Fabrication facilities
+                        <h3 className={`section-title `}>
+                            {t('fabrication_facilities')}
                         </h3>
-                        <p>Structural fabrication area of 180x32m <br />
-                            of which Covered (130x32m).<br />
-                            Outside fabrication area 210x120m<br />
-                            3 overhead cranes (32/8mt) 10m hook<br />
-                            heigth<br />
-                            Utility area (100x10m)<br />
-                            PIP facility<br />
-                            Multi jointing facility<br />
-                            Dedicated area for Blasting and<br />
-                            painting
+                        <p>Structural fabrication area of 180x32m of which Covered (130x32m).<br />
+                            Outside fabrication area 210x120m 
+                            3 overhead cranes (32/8mt) 10m hook heigth<br />
+                            Utility area (100x10m)
+                            PIP facility
+                            Multi jointing facility
+                            Dedicated area for Blasting and painting
                         </p>
                     </div>
                     <div className="col-md-2 yardUtilitiesDiv" style={{ paddingTop: '12%' }}>
-                        <span className={`${styles.verticalText} `}> Yard utilities</span>
+                        <span className={`${styles.verticalText} `}>{t('yard_utilities')}</span>
                         <div className={`${styles.verticalYardLine} `}>
                             <div className={`${styles.verticalLine} `}>
                             </div>
                         </div>
                     </div>
                     <div className="col-md-4 mt-2">
-                        <h3 className={`${styles.sectionTitle} `}>
-                            Production equipment
+                        <h3 className={`section-title `}>
+                            {t('production_equipment')}
                         </h3>
                         <p>
                             SMAW welding equipment (22 pc) <br />
@@ -125,7 +122,7 @@ const About: React.FC = () => {
                         </p>
                     </div>
                     <div className="col-md-4 mt-3">
-                        <h3 className={`${styles.sectionTitle} `}>
+                        <h3 className={`section-title `}>
                             QC equipment
                         </h3>
                         <p>
@@ -141,10 +138,9 @@ const About: React.FC = () => {
                     </div>
 
                     <div className={`col-md-2 ${styles.yardSection} `} style={{ paddingTop: '12%' }}>
-                        <span className={`${styles.verticalText} `}> Production equipment</span>
+                        <span className={`${styles.verticalText} `}> {t('production_equipment')}</span>
                         <div className={`${styles.verticalYardLine} `}>
-                            <div className={`${styles.verticalLine} `}>
-                            </div>
+                            <div className={`${styles.verticalLine} `}></div>
                         </div>
                     </div>
                 </section>
@@ -153,13 +149,13 @@ const About: React.FC = () => {
                     <div className="col-md-6">
                     </div>
                     <div className="col-md-6 mt-3">
-                        <h3 className={`${styles.sectionTitle} `}>
-                            Logistc Equipment
+                        <h3 className={`section-title `}>
+                            {t('logistic_equipment')}
                         </h3>
                         <ul className="shallow-list">
-                            <li className="shallow-list-item"> 1 Liebheer crawler crane (750mt)</li>
+                            <li className="shallow-list-item">1 Liebheer crawler crane (750mt)</li>
                             <li className="shallow-list-item">1 Liebheer crawler crane (400mt) </li>
-                            <li className="shallow-list-item"> 1 Terex (63mt)</li>
+                            <li className="shallow-list-item">1 Terex (63mt)</li>
                         </ul>
                     </div>
                 </section>
@@ -177,7 +173,7 @@ const About: React.FC = () => {
                         <div className="intro-text">
                             <div className="separator">
                                 <div className="line"></div>
-                                <h6>quality, health, <br /> safety and <br /> environmental care </h6>
+                                <h6>{t('quality_health_safety_and_environmental_care')}</h6>
                             </div>
                         </div>
                     </section>
@@ -205,7 +201,7 @@ const About: React.FC = () => {
                         <div className={`${styles.introText} `}>
                             <div className="separator">
                                 <div className="line"></div>
-                                <h6>manpower and training</h6>
+                                <h6>{t('manpower_and_training')}</h6>
                             </div>
                         </div>
                     </section>
@@ -216,12 +212,10 @@ const About: React.FC = () => {
                                 We have a training school where fabricators and <br />
                                 welders are trained and qualified. The training includes <br />
                                 the following welding process <br />
-                                <br />
                                 SMAW <br />
                                 FCAW <br />
                                 GTAW <br />
                                 SAW <br />
-                                <br />
                                 Our training program extends to other specific <br />
                                 disciplines such as scaffold, machine operators, Cranes <br />
                                 operators, Safety training, First Aid, Inspection <br />
@@ -245,7 +239,7 @@ const About: React.FC = () => {
                             <div className={`${styles.introText} `}>
                                 <div className="separator">
                                     <div className="line"></div>
-                                    <h6>our services</h6>
+                                    <h6>{t('our_services')}</h6>
                                 </div>
                             </div>
                         </div>
@@ -261,27 +255,6 @@ const About: React.FC = () => {
                     </section>
                 </section>
                 <section className="col-md-12">
-
-
-
-                    {/* <section className={`col-md-10 col-md-offset-1 ${styles.topBoxes} `}>
-                        {[
-                            "Maintence and repairment of offshore structures: Rigs, Vessels, as well drawing and tests(as required for certification).",
-                            "Logistics and storage services, taking advantage of our 250m quay length with 10.6m water depth.",
-                            "Maintence and repairment of offshore structures: Rigs, Vessels, as well drawing and tests(as required for certification)",
-                        ].map((content, index) => (
-                            <div className="col-md-4" key={index}>
-                                <ServiceCard
-                                    styles={styles}
-                                    ref={(el: any) => (cardRefs.current[index] = el)}
-                                    content={content}
-                                    style={index === 3 ? { backgroundColor: "#EDEDED", textAlign: "center" } : undefined}
-                                />
-                            </div>
-                        ))}
-                    </section> */}
-
-
                     <section className={`col-md-10 col-md-offset-1 ${styles.topBoxes} `}>
                         {[
                             "Design and Engineering of offshore structures.",
@@ -299,7 +272,6 @@ const About: React.FC = () => {
                             </div>
                         ))}
                     </section>
-
                 </section>
 
                 <section className={`col-md-12 ${styles.shallowSection} `} style={{ padding: '0px', marginBottom: '10%' }}>
@@ -308,7 +280,7 @@ const About: React.FC = () => {
                     </div>
 
                     <div className={`col-md-4 ${styles.shallowAlign} `}>
-                        <h3 className={`${styles.sectionTitle} `}>
+                        <h3 className={`section-title `}>
                             Shallow water fields
                         </h3>
                         <ul className={`col-md-4 ${styles.shallowList} `}>
@@ -321,34 +293,34 @@ const About: React.FC = () => {
                     </div>
 
                     <div className={`col-md-2 ${styles.yardSection} `}>
-                        <span className={`${styles.verticalText} `}> Yard utilities</span>
+                        <span className={`${styles.verticalText} `}> {t('yard_utilities')}</span>
                         <div className={`${styles.verticalYardLine} `}>
                             <div className={`${styles.verticalLine} `}>
                             </div>
                         </div>
                     </div>
                 </section>
-
                 <section className={`col-md-12 ${styles.shallowSection} `} style={{ padding: '0px', marginBottom: ' 10%' }}>
                     <div className="col-md-6" style={{ padding: '0px' }}>
                         <img className={`${styles.imgFluid} float-left`} src="/images/deep-water.jpg" />
                     </div>
                     <div className={`col-md-6 ${styles.shallowAlign} `}>
-                        <h3 className={`${styles.sectionTitle} `}>Deep water fields</h3>
-                        <span className="shallow-list">Suction Piles </span>
-                        <span className="shallow-list">• Buoyancy tanks </span>
-                        <span className="shallow-list">• In-field flow lines </span>
-                        <span className="shallow-list">• Risers </span>
-                        <span className="shallow-list">• In line structures LRAs, URAs, FLETs, PLETs </span>
-                        <span className="shallow-list">• Manifolds </span>
-                        <span className="shallow-list">• Other subsea structures </span>
-                        <span className="shallow-list">and several kinds of flow </span>
-                        <span className="shallow-list">lines taking advantage of </span>
-                        <span className="shallow-list">our pipe-in pipe and multi </span>
-                        <span className="shallow-list">jointing facilities. </span>
+                        <h3 className={`section-title `}>Deep water fields</h3>
+                        <ul>
+                            <li className="shallow-list">Suction Piles </li>
+                            <li className="shallow-list">Buoyancy tanks </li>
+                            <li className="shallow-list">In-field flow lines </li>
+                            <li className="shallow-list">Risers </li>
+                            <li className="shallow-list">In line structures LRAs, URAs, FLETs, PLETs </li>
+                            <li className="shallow-list">Manifolds </li>
+                            <li className="shallow-list">Other subsea structures </li>
+                            <li className="shallow-list">and several kinds of flow </li>
+                            <li className="shallow-list">lines taking advantage of </li>
+                            <li className="shallow-list">our pipe-in pipe and multi </li>
+                            <li className="shallow-list">jointing facilities. </li>
+                        </ul>
                     </div>
                 </section>
-
                 <section className={`col-md-12 ${styles.shallowSection} `} style={{ padding: '0px' }}>
                     <div className="col-md-6" style={{ padding: '0px' }}>
                         <img className={`${styles.imgFluid} float-left`}  src="/images/our-service-banner.jpg" />
@@ -365,12 +337,10 @@ const About: React.FC = () => {
                             </div>
                         </div>
                     </div>
-
                     <div className="col-md-6" style={{ marginTop: '2%' }}>
                         <div className={`col-md-4 ${styles.card} ${styles.greyBoxCard} ${styles.greyBoxCard2}`} style={{ marginTop: '10%' }}>
                             <p style={{ padding: '15%' }}>
-                                Logistics and storage services, taking advantage of our 250m quay length with 10.6m water
-                                depth.
+                                Logistics and storage services, taking advantage of our 250m quay length with 10.6m water depth.
                             </p>
                             <div className={`${styles.bottom}` }>
                                 &nbsp;
@@ -378,7 +348,6 @@ const About: React.FC = () => {
                         </div>
                     </div>
                 </section>
-
                 <section className={`col-md-12 ${styles.shallowSection} `}
                     style={{ float: 'right', display: 'table', padding: '0px', marginBottom: '10%' }}>
                     <div className="col-md-6" style={{ padding: '0px' }}>

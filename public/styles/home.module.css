@@ -429,3 +429,19 @@
 .aboutIcons .col-md-4 h4 {
     margin-bottom: 50px;
 }
+
+.introTexto > #text {
+    width: 50px;
+}
+
+.arrowP {
+    font-size: 14px;
+    padding-right: 39%;
+}
+
+.bannerTittle,
+.bannerTittle span,
+.findOutMore {
+    text-transform: uppercase;
+    color: #ffffff;
+}
