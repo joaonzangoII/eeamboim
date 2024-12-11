@@ -106,3 +106,26 @@ span.shallow-list {
 .mt-7 {
     margin-top: 70px;
 }
+
+@media screen and (max-width: 992px) {
+    .logo-nav {
+        width: 15% !important;
+        position: absolute;
+        padding-top: 0% !important;
+    }
+
+
+    .navbar-collapse {
+        padding-left: 0px;
+    }
+
+    .navbar-collapse ul {
+        padding-left: 10px;
+    }
+
+    .section-title {
+        font-size: 20px;
+        line-height: 50px;
+        font-weight: bold;
+    }
+}

@@ -48,7 +48,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased page-body`}
         data-gr-ext-installed=""
-        data-new-gr-c-s-check-loaded="14.1209.0"
+        data-new-gr-c-s-check-loaded="14.1211.0"
         
       >
         <TranslationProvider>

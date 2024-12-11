@@ -25,7 +25,7 @@ const OurServices: React.FC = () => {
     return (
         <>
             <section className={`${styles.containerBanner} `}>
-                <img className={`${styles.banner} `}
+                <img className={`${styles.banner} ${styles.img} `}
                     src="/images/header/ourservices.png"
                     alt="Our Services Banner" />
 
@@ -46,7 +46,7 @@ const OurServices: React.FC = () => {
                     </p>
                 </div>
 
-                <i className="fas fa-chevron-left left" aria-hidden="true"></i>
+                <i className={`fas fa-chevron-left  ${styles.right}`} aria-hidden="true"></i>
                 <div className={`${styles.arrows}`}>
                     <div className={`col-md-6 ${styles.arrowP} `}>
                         <p>Shallow water fields</p>
@@ -59,47 +59,49 @@ const OurServices: React.FC = () => {
                 <SocialIconsBanner styles={styles} />
             </section>
             <section>
-                <section className="col-md-12">
-                    <section className={`col-md-5 ${styles.introSectionLine} `}>
-                        <div className={`${styles.intro} `}>
-                            <div className={`${styles.introText} `}>
-                                <div className="separator">
-                                    <div className="line"></div>
-                                    <h6>{t('our_services')}</h6>
+                <div className="row">
+                    <section className="col-md-12">
+                        <section className={`col-md-5 ${styles.introSectionLine} `}>
+                            <div className={`${styles.intro} `}>
+                                <div className={`${styles.introTexto} `}>
+                                    <div className="separator">
+                                        <div className="line"></div>
+                                        <h6>{t('our_services')}</h6>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </section>
-                    <section className="col-md-6" style={{ float: "right" }}>
-                        <div className={`${styles.introTexto} `}>
-                            {introTexto}
-                        </div>
-                    </section>
-                </section>
+                        </section>
+                        <section className="col-md-6" style={{ float: "right" }}>
 
-                <section className="col-md-12">
-                    <section className={`col-md-10 col-md-offset-1 ${styles.topBoxes} `}>
-                        {[
-                            "Design and Engineering of offshore structures",
-                            "Procurement and Logistics for offshore structures",
-                            "Fabrication of offshore structures",
-                            "Installation and commissioning of offshore in shallow water",
-                        ].map((content, index) => (
-                            <div className="col-md-3" key={index}>
-                                <ServiceCard
-                                    styles={styles}
-                                    ref={(el: any) => (cardRefs.current[index] = el)}
-                                    content={content}
-                                    style={index === 3 ? { backgroundColor: "#EDEDED", textAlign: "center" } : undefined}
-                                />
-                            </div>
-                        ))}
+                            <div className={`${styles.introTexto} `}  
+                                dangerouslySetInnerHTML={{ __html: introTexto }}></div>
+                        </section>
                     </section>
-                </section>
-
+                </div>
+                <div className="row">
+                    <section className="col-md-12">
+                        <section className={`col-md-10 col-md-offset-1 ${styles.topBoxes} `}>
+                            {[
+                                "Design and Engineering of offshore structures",
+                                "Procurement and Logistics for offshore structures",
+                                "Fabrication of offshore structures",
+                                "Installation and commissioning of offshore in shallow water",
+                            ].map((content, index) => (
+                                <div className="col-md-3" key={index}>
+                                    <ServiceCard
+                                        styles={styles}
+                                        ref={(el: any) => (cardRefs.current[index] = el)}
+                                        content={content}
+                                        style={index === 3 ? { backgroundColor: "#EDEDED", textAlign: "center" } : undefined}
+                                    />
+                                </div>
+                            ))}
+                        </section>
+                    </section>
+                </div>
                 <section className={`col-md-12 col-md-offset-1 ${styles.shallowSection} `} style={{ padding: "0px", marginBottom: "10%" }}>
                     <div className="col-md-6" style={{ padding: "0px" }}>
-                        <img className={`${styles.imgFluid} float-left`}
+                        <img className={`${styles.imgFluid} ${styles.img}  float-left`}
                             src="/images/shallow.jpg" 
                             alt="Shallow water fields" />
                     </div>
@@ -126,7 +128,9 @@ const OurServices: React.FC = () => {
                 {/* Deep water section */}
                 <section className={`col-md-12  ${styles.shallowSection} `} style={{ padding: "0px", marginBottom: "10%" }}>
                     <div className="col-md-6" style={{ padding: "0px" }}>
-                        <img className={`${styles.imgFluid} float-left`} src="/images/deep-water.jpg" alt="Deep water fields" />
+                        <img className={`${styles.imgFluid} ${styles.img}  float-left`} 
+                             src="/images/deep-water.jpg" 
+                             alt="Deep water fields" />
                     </div>
                     <div className={`col-md-6  ${styles.shallowAlign} `}>
                         <h3 className="section-title">Deep water fields</h3>

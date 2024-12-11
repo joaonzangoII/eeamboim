@@ -66,16 +66,20 @@ const Home: React.FC = () => {
             {t('find_out_more')}
           </a>
         </div>
-        <i className="fas fa-chevron-left left" aria-hidden="true"></i>
-        <div className={`arrows`}>
-          <div className={`col-md-6 ${styles.arrowP} `}>
-            <p>{t('introduction_to_EAA')}</p>
+
+        <div className={`${styles.topArrowsContainer} `}>
+          <i className="fas fa-chevron-left left" aria-hidden="true"></i>
+          <div className={`arrows`}>
+            <div className={`col-md-6 ${styles.arrowP} `}>
+              <p>{t('introduction_to_EAA')}</p>
+            </div>
+            <div className={`col-md-6 ${styles.arrowP} `}>
+              <p>{t('general_yard_information')}</p>
+            </div>
           </div>
-          <div className={`col-md-6 ${styles.arrowP} `}>
-            <p>{t('general_yard_information')}</p>
-          </div>
+          <i className="fas fa-chevron-right right" aria-hidden="true"></i>
         </div>
-        <i className="fas fa-chevron-right right" aria-hidden="true"></i>
+
         <SocialIconsBanner styles={styles} />
       </section>
       <div className="col-md-10 col-md-offset-1 mt-3">
@@ -97,6 +101,7 @@ const Home: React.FC = () => {
         <div className={`col-md-5 ${styles.yardImgDiv} `} style={{ padding: '0px' }}>
           <article className={`${styles.yardImg} `}>
             <Image
+              className={`${styles.img}`}
               alt="Next.js logo"
               src="/images/PHOTO-2021-01-31-01-04-34.jpg"
               width={1900}
@@ -122,7 +127,7 @@ const Home: React.FC = () => {
       <section>
         <Image 
           alt="Next.js logo" 
-          className={`${styles.imgFluid} ${styles.fabricFullImg}`} 
+          className={`${styles.imgFluid} ${styles.fabricFullImg} ${styles.img}`} 
           src="/images/EAA LDA D (4 de 9).jpg" 
           width={1900}
           height={600}
@@ -132,29 +137,31 @@ const Home: React.FC = () => {
         <div className={`${styles.aboutDiv}`}>
           <aside className={`${styles.aboutAside}`}>
             <div className="row mt-3">
-              <section className={`col-md-5 ${styles.introSectionLine}`}></section>
-              <section className="col-md-7" style={{ float: 'right' }}>
-                <div className="description">
+              {/* <section className={`col-md-5 ${styles.introSectionLine}`}></section> */}
+              <section className="col-md-12" style={{ textAlign: 'center' }}>
+                <div className={`${styles.aboutAsideDescription}`}>
                   <h1 className={`${styles.bannerTittle}`}>{t('about_us')}</h1>
                 </div>
               </section>
             </div>
-            <div className="col-md-10 col-md-offset-1 mt-3">
-              <section className={`col-md-5 ${styles.introSectionLine}`}>
-                <div className={`${styles.intro}`}>
-                  <div className={`${styles.introText}`}>
-                    <div className="separator">
-                      <div className="line"></div>
-                      <h6>{t('vision_values_and_mission')}</h6>
+            <div className="row">
+              <div className="col-md-10 col-md-offset-1 mt-3">
+                <section className={`col-md-5 ${styles.introSectionLine}`}>
+                  <div className={`${styles.intro}`}>
+                    <div className={`${styles.introText}`}>
+                      <div className="separator">
+                        <div className="line"></div>
+                        <h6>{t('vision_values_and_mission')}</h6>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </section>
-              <section className="col-md-7" style={{ float: 'right' }}>
-                <div className="description">
-                  {missionVisionText}
-                </div>
-              </section>
+                </section>
+                <section className="col-md-7" style={{ float: 'right' }}>
+                  <div className="description">
+                    {missionVisionText}
+                  </div>
+                </section>
+              </div>
             </div>
             <div className={`row mt-3 ${styles.aboutIcons}`}>
               <section className="col-md-10 col-md-offset-1">

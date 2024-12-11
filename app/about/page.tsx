@@ -32,7 +32,7 @@ const About: React.FC = () => {
     return (
         <>
             <section className={`${styles.containerBanner} `}>
-                <img className={`${styles.banner} `} src="/images/EAA LDA (5 de 32).jpg" />
+                <img className={`${styles.banner} ${styles.img}`} src="/images/EAA LDA (5 de 32).jpg" />
                 <div className={`${styles.leftTittle}`}>
                     <p className={`${styles.bannerTittle}`}>
                         <span>{t('our_technology')}</span>
@@ -76,7 +76,7 @@ const About: React.FC = () => {
 
                 <section className="col-md-12" style={{ padding: '0px', paddingTop: '4%' }}>
                     <div className="col-md-6" style={{ padding: '0px' }}>
-                        <img className={`${styles.imgFluid} float-left`}  src="/images/Image 7.png" />
+                        <img className={`${styles.imgFluid} ${styles.img} float-left`}  src="/images/Image 7.png" />
                     </div>
                     <div className="col-md-4">
                         <h3 className={`section-title `}>
@@ -91,7 +91,7 @@ const About: React.FC = () => {
                             Dedicated area for Blasting and painting
                         </p>
                     </div>
-                    <div className="col-md-2 yardUtilitiesDiv" style={{ paddingTop: '12%' }}>
+                    <div className={`col-md-2 ${styles.yardUtilitiesDiv} `} style={{ paddingTop: '12%' }}>
                         <span className={`${styles.verticalText} `}>{t('yard_utilities')}</span>
                         <div className={`${styles.verticalYardLine} `}>
                             <div className={`${styles.verticalLine} `}>
@@ -162,7 +162,7 @@ const About: React.FC = () => {
 
                 <section>
                     <img style={{ marginBottom: '5%' }}
-                        className={`${styles.imgFluid} ${styles.fabricFullImg}`} 
+                        className={`${styles.imgFluid} ${styles.fabricFullImg}  ${styles.img}`} 
                         src="/images/sections/home-full-section-4.png" />
                 </section>
             </section>
@@ -244,7 +244,7 @@ const About: React.FC = () => {
                             </div>
                         </div>
                     </section>
-                    <section className="col-md-6" style={{ float: 'right' }}>
+                    <section className={`${styles.introTextoContainer} col-md-6 `}>
                         <div className={`${styles.introTexto} `}>
                             We have strived to meet our clients demands by delivering<br />
                             our projects at the highest quality, and<br />
@@ -276,7 +276,7 @@ const About: React.FC = () => {
 
                 <section className={`col-md-12 ${styles.shallowSection} `} style={{ padding: '0px', marginBottom: '10%' }}>
                     <div className="col-md-6" style={{ padding: 0 }}>
-                        <img className={`${styles.imgFluid} float-left`} src="/images/shallow.jpg" />
+                        <img className={`${styles.imgFluid}  ${styles.img} float-left`} src="/images/shallow.jpg" />
                     </div>
 
                     <div className={`col-md-4 ${styles.shallowAlign} `}>
@@ -302,7 +302,7 @@ const About: React.FC = () => {
                 </section>
                 <section className={`col-md-12 ${styles.shallowSection} `} style={{ padding: '0px', marginBottom: ' 10%' }}>
                     <div className="col-md-6" style={{ padding: '0px' }}>
-                        <img className={`${styles.imgFluid} float-left`} src="/images/deep-water.jpg" />
+                        <img className={`${styles.imgFluid}  ${styles.img} float-left`} src="/images/deep-water.jpg" />
                     </div>
                     <div className={`col-md-6 ${styles.shallowAlign} `}>
                         <h3 className={`section-title `}>Deep water fields</h3>
@@ -321,9 +321,10 @@ const About: React.FC = () => {
                         </ul>
                     </div>
                 </section>
-                <section className={`col-md-12 ${styles.shallowSection} `} style={{ padding: '0px' }}>
-                    <div className="col-md-6" style={{ padding: '0px' }}>
-                        <img className={`${styles.imgFluid} float-left`}  src="/images/our-service-banner.jpg" />
+                <section className={`col-md-12 ${styles.shallowSection} `} style={{ padding: '0px', paddingBottom: '15px' }}>
+                    <div className="col-md-6" style={{ padding: '0px', paddingBottom: '15px' }}>
+                        <img className={`${styles.imgFluid}  ${styles.img} float-left`}  
+                            src="/images/our-service-banner.jpg" />
                     </div>
 
                     <div className="col-md-6">
@@ -351,7 +352,8 @@ const About: React.FC = () => {
                 <section className={`col-md-12 ${styles.shallowSection} `}
                     style={{ float: 'right', display: 'table', padding: '0px', marginBottom: '10%' }}>
                     <div className="col-md-6" style={{ padding: '0px' }}>
-                        <img className={`${styles.imgFluid} float-left`}  src="/images/3_481x360px.png" />
+                        <img className={`${styles.imgFluid}  ${styles.img} float-left`}  
+                            src="/images/3_481x360px.png" />
                     </div>
                     <div className="col-md-6">
                         <div className={`col-md-4 ${styles.card} ${styles.greyBoxCard} ${styles.greyBoxCard2}`} style={{ marginTop: '15%' }}>

@@ -74,7 +74,7 @@
 
 .bannerTittle {
     font-family: "Montserrat", sans-serif;
-    letter-spacing: 4.4px;
+    /* letter-spacing: 4.4px; */
 }
 
 .containerBanner {
@@ -127,7 +127,7 @@
 .quality-text {
     color: #fff;
     text-align: left;
-    letter-spacing: 4.8px;
+    /* letter-spacing: 4.8px; */
     color: #ffffff;
     opacity: 1;
 }
@@ -192,11 +192,11 @@
 }
 
 .introDescription {
-    word-spacing: 8px;
+    /* word-spacing: 8px; */
 }
 
 .page-body h1 {
-    letter-spacing: 6.4px;
+    /* letter-spacing: 6.4px; */
     color: #ffffff;
     font-size: 34px;
     font-weight: 500;
@@ -302,4 +302,61 @@
 .bannerTittle span,
 .findOutMore {
     text-transform: uppercase;
+}
+
+@media screen and (max-width: 992px) {
+    .logoNav{
+        width: 15%;
+        position: absolute;
+        padding-top: 0% !important;
+    }
+    .img {
+        width: 100%;
+        height: auto !important;
+    }
+
+    .intro {
+        width: 100%;
+        margin-right: 0%;
+        float: none;
+        font-family: "Montserrat", sans-serif;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .topBoxes {
+        height: auto;
+        font-weight: 700;
+        margin-bottom: 5%;
+        margin-top: 5%;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .leftTittle {
+        top: 34%;
+        margin-left: 30%;
+        width: 50%;
+        color: #ffffff;
+    }
+
+    .bannerTittle,
+    .leftTittle span {
+        font-size: 25px;
+        color: #ffffff;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .left {
+        display: none;
+    }
+
+    .socialIconsBanner {
+        left: 90%;
+    }
 }
