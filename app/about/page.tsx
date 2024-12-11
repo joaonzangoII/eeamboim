@@ -1,38 +1,64 @@
 "use client"
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 // import Image from "next/image";
 import styles from '@/public/styles/about.module.css';
-import stylesManPower from '@/public/styles/about.module.css';
+import stylesManPower from '@/public/styles/manpower.module.css';
 import { useTranslation } from 'next-i18next';
-import Manpower from "@/app/components/manpower";
+import ImagesDisplay from "@/app/components/imagesDiplay";
 import SocialIconsBanner from "@/app/components/socialIconsBanner";
 import ServiceCard from "@/app/components/serviceCard";
-// import "@/public/styles/services.module.css";
+import Text from "../models/Text";
 
 const About: React.FC = () => {
-    const { t } = useTranslation();
-    const cardRefs: any = useRef([]);
+    const { t, i18n } = useTranslation();
+    const [texts, setTexts] = useState<Text | any>(null);
+    const cardRefs = useRef<(HTMLDivElement | null)[]>([]);;
+    const card2Refs = useRef<(HTMLDivElement | null)[]>([]);
+    const lang = i18n.language; // You can change this dynamically based on user preference or query
 
-    const introTexto = `
-        In our yard, state of art technologies are utilized for
-        manufacturing support. Specific design and drawing
-        software, as well as Matrix
-        for material traceability and primavera for planning, are
-        combined with modules developed in-house for a bespoke
-        fit to all our
-        projects and requirements
-    `
+    const mainPowerImages: string[] =
+    [
+        "/images/manpower-banner.jpg",
+        "/images/manpower2.jpg",
+        "/images/imagens-06.png"
+    ]
+
     useEffect(() => {
-        const maxHeight = Math.max(...cardRefs.current.map((card: any) => card.offsetHeight));
+        let maxHeight = Math.max(...cardRefs.current.map((card: any) => card.offsetHeight));
         cardRefs.current.forEach((card: any) => {
             card.style.height = `${maxHeight}px`;
             console.log(maxHeight)
         });
-    }, []);
+
+        maxHeight = Math.max(...card2Refs.current.map((card: any) => card.offsetHeight));
+        card2Refs.current.forEach((card: any) => {
+            card.style.height = `${maxHeight}px`;
+            console.log(maxHeight)
+        });
+    }, [texts]);
+
+
+    useEffect(() => {
+        const fetchTexts = async () => {
+            try {
+                const response = await fetch(`/api/text?lang=${lang}`);
+                const data = await response.json();
+                setTexts(data);
+            } catch (error) {
+                console.error('Error fetching texts:', error);
+            }
+        };
+
+        fetchTexts();
+    }, [lang]);
+
+    if (!texts) return <p>Loading...</p>;
+
+
     return (
         <>
             <section className={`${styles.containerBanner} `}>
-                <img className={`${styles.banner} ${styles.img}`} src="/images/EAA LDA (5 de 32).jpg" />
+                <img className={`${styles.banner} ${styles.img}`} src="/images/EAA LDA (5 de 32).jpg" alt="/images/EAA LDA (5 de 32).jpg" />
                 <div className={`${styles.leftTittle}`}>
                     <p className={`${styles.bannerTittle}`}>
                         <span>{t('our_technology')}</span>
@@ -69,72 +95,40 @@ const About: React.FC = () => {
                     </div>
                     <div className="col-md-6" style={{ float: 'right' }}>
                         <div className={`${styles.introTexto} `}>
-                            {introTexto}
+                            <div dangerouslySetInnerHTML={{ __html: texts.OurTechnologyIntroTexto }}></div>
                         </div>
                     </div>
                 </section>
 
                 <section className="col-md-12" style={{ padding: '0px', paddingTop: '4%' }}>
                     <div className="col-md-6" style={{ padding: '0px' }}>
-                        <img className={`${styles.imgFluid} ${styles.img} float-left`}  src="/images/Image 7.png" />
+                        <img 
+                            className={`${styles.imgFluid} ${styles.img} float-left`}  
+                            src="/images/Image 7.png" />
                     </div>
                     <div className="col-md-4">
                         <h3 className={`section-title `}>
                             {t('fabrication_facilities')}
                         </h3>
-                        <p>Structural fabrication area of 180x32m of which Covered (130x32m).<br />
-                            Outside fabrication area 210x120m 
-                            3 overhead cranes (32/8mt) 10m hook heigth<br />
-                            Utility area (100x10m)
-                            PIP facility
-                            Multi jointing facility
-                            Dedicated area for Blasting and painting
-                        </p>
+                        <div dangerouslySetInnerHTML={{ __html: texts.installationUtilities }}></div>
                     </div>
                     <div className={`col-md-2 ${styles.yardUtilitiesDiv} `} style={{ paddingTop: '12%' }}>
                         <span className={`${styles.verticalText} `}>{t('yard_utilities')}</span>
                         <div className={`${styles.verticalYardLine} `}>
-                            <div className={`${styles.verticalLine} `}>
-                            </div>
+                            <div className={`${styles.verticalLine} `}></div>
                         </div>
                     </div>
                     <div className="col-md-4 mt-2">
                         <h3 className={`section-title `}>
                             {t('production_equipment')}
                         </h3>
-                        <p>
-                            SMAW welding equipment (22 pc) <br />
-                            FCAW welding equipment (25pc)<br />
-                            GTAW welding equipment (30pc) <br />
-                            SAW welding equipment (8pc ) <br />
-                            Welding rollers (16 pc 100mt load <br />
-                            capacity each. 200mT load <br />
-                            capacity/set) <br />
-                            CNC plate cutter (3x12m) <br />
-                            CNC profiler (round tubular)<br />
-                            CNC profiler (beams) <br />
-                            Rolling machine (3000mm wide,<br />
-                            72mm thick in St355) upper roll <br />
-                            790mm<br />
-                            Vacuum Blasting machines <br />
-                            Fabrication stands for spools<br />
-                            fabrication
-                        </p>
+                        <div dangerouslySetInnerHTML={{ __html: texts.productionEquipmentIntro }}></div>
                     </div>
                     <div className="col-md-4 mt-3">
                         <h3 className={`section-title `}>
-                            QC equipment
+                            {texts.QcEquipmentTitle}
                         </h3>
-                        <p>
-                            Calibrated measuring tools (wide<br />
-                            range, length, temperature, pressure) <br />
-                            Weighing equipment <br />
-                            Dimensional control (2x) 3D scanners <br />
-                            Paint inspection equipment <br />
-                            NDE equipment <br />
-                            High pressure Hydrotesting <br />
-                            equipment
-                        </p>
+                        <div dangerouslySetInnerHTML={{ __html: texts.QcEquipmentIntro }}></div>
                     </div>
 
                     <div className={`col-md-2 ${styles.yardSection} `} style={{ paddingTop: '12%' }}>
@@ -152,11 +146,7 @@ const About: React.FC = () => {
                         <h3 className={`section-title `}>
                             {t('logistic_equipment')}
                         </h3>
-                        <ul className="shallow-list">
-                            <li className="shallow-list-item">1 Liebheer crawler crane (750mt)</li>
-                            <li className="shallow-list-item">1 Liebheer crawler crane (400mt) </li>
-                            <li className="shallow-list-item">1 Terex (63mt)</li>
-                        </ul>
+                        <div dangerouslySetInnerHTML={{ __html: texts.logisticEquipmentIntro }}></div>
                     </div>
                 </section>
 
@@ -180,15 +170,7 @@ const About: React.FC = () => {
                     <section className={`col-md-6 ${styles.introSection} `}>
                         <div className={`${styles.introDescription} `}>
                             <div style={{ fontWeight: 400, color: '#C4C4C4', paddingBottom: '5%' }}>
-                                Estaleiro Atlântico do Amboim operates an integrated <br />
-                                management system incorporating <br />
-                                Quality, Safety, Health and environmental care which is guided <br />
-                                by the ISO 9001:2008 Code <br />
-                                for Quality management, and IMO’s ISM Code for safety and <br />
-                                environmental management. <br />
-                                We are commited to provide a healthy and safe working <br />
-                                environment and, as such, we apply a set of effective <br />
-                                measurement tools on the yard aimed at.
+                                <div dangerouslySetInnerHTML={{ __html: texts.qualityHealthSafetyAndEnvironmentalcareIntroText }}></div>
                             </div>
                         </div>
                     </section>
@@ -208,29 +190,13 @@ const About: React.FC = () => {
 
                     <section className={`col-md-6 ${styles.introSection} `}>
                         <div className={`${styles.introDescription} `}>
-                            <p style={{ fontWeight: 400, color: '#C4C4C4' }}>
-                                We have a training school where fabricators and <br />
-                                welders are trained and qualified. The training includes <br />
-                                the following welding process <br />
-                                SMAW <br />
-                                FCAW <br />
-                                GTAW <br />
-                                SAW <br />
-                                Our training program extends to other specific <br />
-                                disciplines such as scaffold, machine operators, Cranes <br />
-                                operators, Safety training, First Aid, Inspection <br />
-                                training, English, Excel, Matrix, Drawing Software, <br />
-                                Injury <br />
-                                incident free (IFF), Fire Fighting among others.<br />
-                                We also collaborate with local universities and <br />
-                                institutes, delivering workshops and presentations, <br />
-                                with the <br />
-                                aim of hunting local talents
-                            </p>
+                            <div style={{ fontWeight: 400, color: '#C4C4C4' }}>
+                                <div dangerouslySetInnerHTML={{ __html: texts.ManpowerAndTrainingText }}></div>
+                            </div>
                         </div>
                     </section>
                 </section>
-                <Manpower styles={stylesManPower}/>
+                <ImagesDisplay styles={stylesManPower} images={mainPowerImages} />
             </section>
             <section>
                 <section className="col-md-12">
@@ -246,50 +212,40 @@ const About: React.FC = () => {
                     </section>
                     <section className={`${styles.introTextoContainer} col-md-6 `}>
                         <div className={`${styles.introTexto} `}>
-                            We have strived to meet our clients demands by delivering<br />
-                            our projects at the highest quality, and<br />
-                            through our ability to design and manufacture all kinds of<br />
-                            tailor-made steel tool strutures. <br />
-                            Our yard used to provide the following services:
+                            <div dangerouslySetInnerHTML={{ __html: texts.introTextOurServices }}></div>
                         </div>
                     </section>
                 </section>
                 <section className="col-md-12">
                     <section className={`col-md-10 col-md-offset-1 ${styles.topBoxes} `}>
-                        {[
-                            "Design and Engineering of offshore structures.",
-                            "Procurement and Logistics for offshore structures",
-                            "Fabrication of offshore structure",
-                            "Installation and commissioning of offshore in shallow water"
-                        ].map((content, index) => (
-                            <div className="col-md-3" key={index}>
-                                <ServiceCard
-                                    styles={styles}
-                                    ref={(el: any) => (cardRefs.current[index] = el)}
-                                    content={content}
-                                    style={index === 3 ? { backgroundColor: "#EDEDED", textAlign: "center" } : undefined}
-                                />
-                            </div>
-                        ))}
+                        {
+                            texts.services
+                                ? texts.services.map((content: string, index: number) => (
+                                    <div className="col-md-3" key={index}>
+                                        <ServiceCard
+                                            styles={styles}
+                                            ref={(el: any) => (cardRefs.current[index] = el)}
+                                            content={content}
+                                            style={index === 3 ? { backgroundColor: "#EDEDED", textAlign: "center" } : undefined}
+                                        />
+                                    </div>
+                                ))
+
+                                : null
+                        }
                     </section>
                 </section>
 
-                <section className={`col-md-12 ${styles.shallowSection} `} style={{ padding: '0px', marginBottom: '10%' }}>
+                <section className={`col-md-12 ${styles.shallowSection} `} style={{ padding: '0px', marginBottom: '5%' }}>
                     <div className="col-md-6" style={{ padding: 0 }}>
                         <img className={`${styles.imgFluid}  ${styles.img} float-left`} src="/images/shallow.jpg" />
                     </div>
 
                     <div className={`col-md-4 ${styles.shallowAlign} `}>
                         <h3 className={`section-title `}>
-                            Shallow water fields
+                            {texts.ShallowWaterFieldsTitle}
                         </h3>
-                        <ul className={`col-md-4 ${styles.shallowList} `}>
-                            <li className="shallow-list-item">Piles </li>
-                            <li className="shallow-list-item">Jackets </li>
-                            <li className="shallow-list-item">Small topside modules </li>
-                            <li className="shallow-list-item">Grillages </li>
-                            <li className="shallow-list-item">Seafastening</li>
-                        </ul>
+                        <div dangerouslySetInnerHTML={{ __html: texts.ShallowWaterFieldsIntro }}></div>
                     </div>
 
                     <div className={`col-md-2 ${styles.yardSection} `}>
@@ -300,28 +256,39 @@ const About: React.FC = () => {
                         </div>
                     </div>
                 </section>
-                <section className={`col-md-12 ${styles.shallowSection} `} style={{ padding: '0px', marginBottom: ' 10%' }}>
+                <section className={`col-md-12 ${styles.shallowSection} `} style={{ padding: '0px', marginBottom: ' 5%' }}>
                     <div className="col-md-6" style={{ padding: '0px' }}>
                         <img className={`${styles.imgFluid}  ${styles.img} float-left`} src="/images/deep-water.jpg" />
                     </div>
                     <div className={`col-md-6 ${styles.shallowAlign} `}>
-                        <h3 className={`section-title `}>Deep water fields</h3>
-                        <ul>
-                            <li className="shallow-list">Suction Piles </li>
-                            <li className="shallow-list">Buoyancy tanks </li>
-                            <li className="shallow-list">In-field flow lines </li>
-                            <li className="shallow-list">Risers </li>
-                            <li className="shallow-list">In line structures LRAs, URAs, FLETs, PLETs </li>
-                            <li className="shallow-list">Manifolds </li>
-                            <li className="shallow-list">Other subsea structures </li>
-                            <li className="shallow-list">and several kinds of flow </li>
-                            <li className="shallow-list">lines taking advantage of </li>
-                            <li className="shallow-list">our pipe-in pipe and multi </li>
-                            <li className="shallow-list">jointing facilities. </li>
-                        </ul>
+                        <h3 className={`section-title `}>{texts.DeepWaterFieldsTitle}</h3>
+                        <div dangerouslySetInnerHTML={{ __html: texts.DeepWaterFieldsIntro }}></div>
                     </div>
                 </section>
-                <section className={`col-md-12 ${styles.shallowSection} `} style={{ padding: '0px', paddingBottom: '15px' }}>
+
+                <section className="col-md-12">
+                    <section className={`col-md-10 col-md-offset-1 ${styles.topBoxes} `}>
+                        {
+                            texts.services2 
+                                ? texts.services2.map((content: string, index: number) => (
+                                    <div className="col-md-4" key={index}>
+                                        <ServiceCard
+                                            styles={styles}
+                                            ref={(el: any) => (card2Refs.current[index] = el)}
+                                            content={content}
+                                            style={index === 3 ? { backgroundColor: "#EDEDED", textAlign: "center" } : undefined}
+                                        />
+                                    </div>
+                                ))
+
+                            : null
+                        }
+                    </section>
+                </section>
+
+                <ImagesDisplay styles={stylesManPower} images={["/images/EAA LDA (31 de 32).jpg", "/images/our-service-banner.jpg", "/images/EAA LDA (29 de 32).jpg"]} />
+
+                {/* <section className={`col-md-12 ${styles.shallowSection} `} style={{ padding: '0px', paddingBottom: '15px' }}>
                     <div className="col-md-6" style={{ padding: '0px', paddingBottom: '15px' }}>
                         <img className={`${styles.imgFluid}  ${styles.img} float-left`}  
                             src="/images/our-service-banner.jpg" />
@@ -364,7 +331,7 @@ const About: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> */}
             </section>
         </>
     )

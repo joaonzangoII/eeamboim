@@ -1,27 +1,45 @@
 "use client"
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from '@/public/styles/services.module.css';
 import SocialIconsBanner from "@/app/components/socialIconsBanner";
 import ServiceCard from "@/app/components/serviceCard";
 import { useTranslation } from 'next-i18next';
+import Text from "../models/Text";
 
 const OurServices: React.FC = () => {
-    const { t } = useTranslation();
-    const cardRefs: any = useRef([]);
-    const introTexto = `
-    We have strived to meet our clients demands by delivering<br />
-    our projects at the highest quality, and<br />
-    through our ability to design and manufacture all kinds of<br />
-    tailor-made steel tool structures.<br />
-    Our yard used to provide the following services:
-    `
+    const { t, i18n } = useTranslation();
+    const lang = i18n.language; // You can change this dynamically based on user preference or query
+
+    const [texts, setTexts] = useState<Text | any>({});
+    const cardRefs = useRef<(HTMLDivElement | null)[]>([]);;
+
     useEffect(() => {
         const maxHeight = Math.max(...cardRefs.current.map((card: any) => card.offsetHeight));
         cardRefs.current.forEach((card: any) => {
             card.style.height = `${maxHeight}px`;
             console.log(maxHeight)
         });
-    }, []);
+    }, [texts]);
+
+
+    useEffect(() => {
+        const fetchTexts = async () => {
+            try {
+                const response = await fetch(`/api/text?lang=${lang}`);
+                const data = await response.json();
+                setTexts(data);
+            } catch (error) {
+                console.error('Error fetching texts:', error);
+            }
+        };
+
+        fetchTexts();
+    }, [lang]);
+
+    if (!texts) return <p>Loading...</p>;
+
+
+
     return (
         <>
             <section className={`${styles.containerBanner} `}>
@@ -49,10 +67,10 @@ const OurServices: React.FC = () => {
                 <i className={`fas fa-chevron-left  ${styles.right}`} aria-hidden="true"></i>
                 <div className={`${styles.arrows}`}>
                     <div className={`col-md-6 ${styles.arrowP} `}>
-                        <p>Shallow water fields</p>
+                        <p>{texts.ShallowWaterFieldsTitle}</p>
                     </div>
                     <div className={`col-md-6 ${styles.arrowP} `}>
-                        <p>Deep water fields</p>
+                        <p>{texts.DeepWaterFieldsTitle}</p>
                     </div>
                 </div>
                 <i className={`fas fa-chevron-right  ${styles.right}`} aria-hidden="true"></i>
@@ -74,28 +92,28 @@ const OurServices: React.FC = () => {
                         <section className="col-md-6" style={{ float: "right" }}>
 
                             <div className={`${styles.introTexto} `}  
-                                dangerouslySetInnerHTML={{ __html: introTexto }}></div>
+                                dangerouslySetInnerHTML={{ __html: texts.introTextOurServices }}></div>
                         </section>
                     </section>
                 </div>
                 <div className="row">
                     <section className="col-md-12">
                         <section className={`col-md-10 col-md-offset-1 ${styles.topBoxes} `}>
-                            {[
-                                "Design and Engineering of offshore structures",
-                                "Procurement and Logistics for offshore structures",
-                                "Fabrication of offshore structures",
-                                "Installation and commissioning of offshore in shallow water",
-                            ].map((content, index) => (
-                                <div className="col-md-3" key={index}>
-                                    <ServiceCard
-                                        styles={styles}
-                                        ref={(el: any) => (cardRefs.current[index] = el)}
-                                        content={content}
-                                        style={index === 3 ? { backgroundColor: "#EDEDED", textAlign: "center" } : undefined}
-                                    />
-                                </div>
-                            ))}
+                            {
+                                texts.services
+                                    ? texts.services.map((content: string, index: number) => (
+                                        <div className="col-md-3" key={index}>
+                                            <ServiceCard
+                                                styles={styles}
+                                                ref={(el: any) => (cardRefs.current[index] = el)}
+                                                content={content}
+                                                style={index === 3 ? { backgroundColor: "#EDEDED", textAlign: "center" } : undefined}
+                                            />
+                                        </div>
+                                    ))
+
+                                    : null
+                            }
                         </section>
                     </section>
                 </div>
@@ -103,18 +121,12 @@ const OurServices: React.FC = () => {
                     <div className="col-md-6" style={{ padding: "0px" }}>
                         <img className={`${styles.imgFluid} ${styles.img}  float-left`}
                             src="/images/shallow.jpg" 
-                            alt="Shallow water fields" />
+                            alt={texts.ShallowWaterFieldsTitle} />
                     </div>
 
                     <div className={`col-md-4  ${styles.shallowAlign} `}>
-                        <h3 className="section-title">Shallow water fields</h3>
-                        <ul className={`${styles.shallowList}`}>
-                            {["Piles", "Jackets", "Small topside modules", "Grillages", "Seafastening"].map((item, index) => (
-                                <li key={index} className="shallow-list-item">
-                                    {item}
-                                </li>
-                            ))}
-                        </ul>
+                        <h3 className="section-title">{texts.ShallowWaterFieldsTitle}</h3>
+                        <div dangerouslySetInnerHTML={{ __html: texts.ShallowWaterFieldsIntro }}></div>
                     </div>
 
                     <div className={`col-md-2  ${styles.yardSection} `}>
@@ -130,23 +142,11 @@ const OurServices: React.FC = () => {
                     <div className="col-md-6" style={{ padding: "0px" }}>
                         <img className={`${styles.imgFluid} ${styles.img}  float-left`} 
                              src="/images/deep-water.jpg" 
-                             alt="Deep water fields" />
+                            alt={texts.DeepWaterFieldsTitle} />
                     </div>
                     <div className={`col-md-6  ${styles.shallowAlign} `}>
-                        <h3 className="section-title">Deep water fields</h3>
-                        {[
-                            "Suction Piles",
-                            "Buoyancy tanks",
-                            "In-field flow lines",
-                            "Risers",
-                            "In line structures LRAs, URAs, FLETs, PLETs",
-                            "Manifolds",
-                            "Other subsea structures",
-                        ].map((item, index) => (
-                            <span key={index} className="shallow-list">
-                                {item}{" "}
-                            </span>
-                        ))}
+                        <h3 className="section-title">{texts.DeepWaterFieldsTitle}</h3>
+                        <div dangerouslySetInnerHTML={{ __html: texts.DeepWaterFieldsIntro }}></div>
                     </div>
                 </section>
 

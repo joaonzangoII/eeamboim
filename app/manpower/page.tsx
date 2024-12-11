@@ -1,11 +1,17 @@
 "use client"
 import React from "react";
 import styles from '@/public/styles/manpower.module.css';
-import Manpower from "@/app/components/manpower";
+import ImagesDisplay from "@/app/components/imagesDiplay";
 import SocialIconsBanner from "@/app/components/socialIconsBanner";
 import { useTranslation } from 'next-i18next';
 
 const ManpowerAndTraining: React.FC = () => {
+  const mainPowerImages : string[]=
+    [
+      "/images/manpower-banner.jpg",
+      "/images/manpower2.jpg",
+      "/images/imagens-06.png"
+    ]
   const { t } = useTranslation();
   const manpowerText = `
     We have a training school where fabricators and <br />
@@ -80,13 +86,13 @@ const ManpowerAndTraining: React.FC = () => {
 
         <section className={`col-md-6 ${styles.introSection} `}>
           <div className={`col-md-6 ${styles.introDescription} `}>
-            <div style={{ fontWeight: 400, color: "#C4C4C4" }} 
+            <div style={{ fontWeight: 400, color: "#C4C4C4" }}
               dangerouslySetInnerHTML={{ __html: manpowerText }}
             />
           </div>
         </section>
       </section>
-      <Manpower styles={styles} />
+      <ImagesDisplay styles={styles} images={mainPowerImages} />
     </>
   );
 };

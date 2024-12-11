@@ -1,52 +1,102 @@
 
 "use client"
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from '@/public/styles/home.module.css';
 import SocialIconsBanner from "@/app/components/socialIconsBanner";
 import { useTranslation } from 'next-i18next';
+import Text from "./models/Text";
+
 
 const Home: React.FC = () => {
+  const [texts, setTexts] = useState<Text | any>(null);
+  const { i18n } = useTranslation() ;
   const { t } = useTranslation();
+  const lang = i18n.language; // You can change this dynamically based on user preference or query
 
-  const introText = `The Estaleiro Atlantico do Amboim (EAA), is a shipyard and energy industry in Angola. 
-  The manufacturing yard is located at Praia do Kissonde, Porto Amboim, Kwanza-Sul, Angola. 
-  Specializes in the construction of underwater structures and the manufacture of support 
-  equipment for the oil and gas industry.`;
+  useEffect(() => {
+    const fetchTexts = async () => {
+      try {
+        const response = await fetch(`/api/text?lang=${lang}`);
+        const data = await response.json();
+        setTexts(data);
+      } catch (error) {
+        console.error('Error fetching texts:', error);
+      }
+    };
 
-  const yardUtilitiesText = `<ul>
-    <li>Offices (1050 m2) </li>
-    <li>Restaurant (300 seats) </li>
-    <li>Own satellite connection </li>
-    <li>Fuel storage (60m3) </li>
-    <li>Fuel purification unit </li>
-    <li>E-power plant (8mW) </li>
-    <li>2x RO-water plant (160m3/d) </li>
-    <li>Anaerobe sewer treatment plant </li>
-    <li>Medical facilities with yard hospital (2 beds) </li>
-    <li>Ambulance </li>
-    <li>Fire fighting truck </li>
-    <li>EAATC (Estaleiro Atlântico do Amboim Training  </li>
-    <li>Centre) capacity 40 trainees </li>
-    <li>EAASC (Estaleiro Atlântico do Amboim Safety Centre) </li>
-    <li>capacity 16 trainees </li>
-    <li>Maintenance building</li>
-    <li>Car wash area with oil/water separator </li>
-  </ul>`
+    fetchTexts();
+  }, [lang]);
 
-  const ourYardText = `<ul>
-    <li>150.000 m2 (15 ha), loadbearing 90 t/m2 </li>
-    <li>Direct acess to open sea</li>
-    <li>Quay 250m, 10.6m water depth</li>
-    <li>Quay load 5 t/m2 - 10 t/m2</li>
-    <li>Breakwater protection </li>
-    <li>Connected by road transport to Luanda</li>
-    </ul>
-  `
+  if (!texts) return <p>Loading...</p>;
 
-  const missionVisionText = `
-  The Vision, Values and Mission of EAA, LDA materialize the company's ambition to be a reference in society, contributing decisively to the development of the oil sector and other markets.
-  `
+  // const introText = `The Estaleiro Atlantico do Amboim (EAA), is a shipyard and energy industry in Angola. 
+  // The manufacturing yard is located at Praia do Kissonde, Porto Amboim, Kwanza-Sul, Angola. 
+  // Specializes in the construction of underwater structures and the manufacture of support 
+  // equipment for the oil and gas industry.`;
 
+  // const yardUtilitiesText = `<ul>
+  //   <li>Offices (1050 m2) </li>
+  //   <li>Restaurant (300 seats) </li>
+  //   <li>Own satellite connection </li>
+  //   <li>Fuel storage (60m3) </li>
+  //   <li>Fuel purification unit </li>
+  //   <li>E-power plant (8mW) </li>
+  //   <li>2x RO-water plant (160m3/d) </li>
+  //   <li>Anaerobe sewer treatment plant </li>
+  //   <li>Medical facilities with yard hospital (2 beds) </li>
+  //   <li>Ambulance </li>
+  //   <li>Fire fighting truck </li>
+  //   <li>EAATC (Estaleiro Atlântico do Amboim Training  </li>
+  //   <li>Centre) capacity 40 trainees </li>
+  //   <li>EAASC (Estaleiro Atlântico do Amboim Safety Centre) </li>
+  //   <li>capacity 16 trainees </li>
+  //   <li>Maintenance building</li>
+  //   <li>Car wash area with oil/water separator </li>
+  // </ul>`
+
+  // const ourYardText = `<ul>
+  //   <li>150.000 m2 (15 ha), loadbearing 90 t/m2 </li>
+  //   <li>Direct acess to open sea</li>
+  //   <li>Quay 250m, 10.6m water depth</li>
+  //   <li>Quay load 5 t/m2 - 10 t/m2</li>
+  //   <li>Breakwater protection </li>
+  //   <li>Connected by road transport to Luanda</li>
+  //   </ul>
+  // `
+
+  // const missionVisionText = `
+  // The Vision, Values and Mission of EAA, LDA materialize the company's ambition to be a reference in society, contributing decisively to the development of the oil sector and other markets.
+  // `
+
+
+  // const visionText = `
+  //   <p>
+  //     To be recognized for excellence, quality and rigorin the projects carried out
+  //     and for the fulfillment of Social Responsibilities.
+  //   </p>
+  // `
+
+  // const valuesText = `
+  //   <p><b>Human</b></p>
+  //   <p>
+  //     Respect, Integrity, Loyalty, Discretion, Receptiveness, Ambition and Dedication;
+  //   </p>
+  //   <p><b>Social</b></p>
+  //   <p>
+  //     Ethics, Responsibility, Solidarity and Culture Development;
+  //   </p>
+  //   <p><b>Business</b></p>
+  //   <p>
+  //     Rigor, Competence, Professionalism, Efficiency, Innovation and Transparency.
+  //   </p>
+  // `
+
+  // const missionText = `
+  //   <p>
+  //     Deliver projects safely, with quality, on time and on budget,
+  //   </p>
+  // `
   return (
     <>
       <section className={`${styles.containerBanner} `}>
@@ -94,7 +144,7 @@ const Home: React.FC = () => {
           </div>
         </section>
         <section className="col-md-7" style={{ float: 'right' }}>
-          <div className={`${styles.introTexto} `} dangerouslySetInnerHTML={{ __html: introText }}></div>
+          <div className={`${styles.introTexto} `} dangerouslySetInnerHTML={{ __html: texts.introText }}></div>
         </section>
       </div>
       <section className={`col-md-12 ${styles.introSection} `} style={{ padding: '0px' }}>
@@ -115,11 +165,11 @@ const Home: React.FC = () => {
             <span className={`${styles.verticalText} `}>  {t('yard_utilities')}</span>
             <aside className={`${styles.yardDesc} `}>
               <h1>{t('our_yard')}</h1>
-              <div dangerouslySetInnerHTML={{ __html: ourYardText }}></div>
+              <div dangerouslySetInnerHTML={{ __html: texts.ourYardText }}></div>
             </aside>
             <aside className={`${styles.yardUtilities} `}>
               <h1>{t('yard_utilities')}</h1>
-              <div dangerouslySetInnerHTML={{ __html: yardUtilitiesText }}></div>
+              <div dangerouslySetInnerHTML={{ __html: texts.yardUtilitiesText }}></div>
             </aside>
           </div>
         </div>
@@ -157,9 +207,7 @@ const Home: React.FC = () => {
                   </div>
                 </section>
                 <section className="col-md-7" style={{ float: 'right' }}>
-                  <div className="description">
-                    {missionVisionText}
-                  </div>
+                  <div className="description" dangerouslySetInnerHTML={{ __html: texts.missionVisionText }}></div>
                 </section>
               </div>
             </div>
@@ -171,10 +219,7 @@ const Home: React.FC = () => {
                   </div>
                   <div className="text">
                     <h4>{t('vision')}</h4>
-                    <p>
-                      To be recognized for excellence, quality and rigorin the projects carried out
-                      and for the fulfillment of Social Responsibilities.
-                    </p>
+                    <div dangerouslySetInnerHTML={{ __html: texts.visionText }}></div>
                   </div>
                 </div>
                 <div className="col-md-4">
@@ -183,18 +228,7 @@ const Home: React.FC = () => {
                   </div>
                   <div className="text">
                     <h4>{t('values')}</h4>
-                    <p><b>Human</b></p>
-                    <p>
-                      Respect, Integrity, Loyalty, Discretion, Receptiveness, Ambition and Dedication;
-                    </p>
-                    <p><b>Social</b></p>
-                    <p>
-                      Ethics, Responsibility, Solidarity and Culture Development;
-                    </p>
-                    <p><b>Business</b></p>
-                    <p>
-                      Rigor, Competence, Professionalism, Efficiency, Innovation and Transparency.
-                    </p>
+                    <div dangerouslySetInnerHTML={{ __html: texts.valuesText }}></div>
                   </div>
                 </div>
                 <div className="col-md-4">
@@ -203,9 +237,7 @@ const Home: React.FC = () => {
                   </div>
                   <div className="text">
                     <h4>{t('mission')}</h4>
-                    <p>
-                      Deliver projects safely, with quality, on time and on budget,
-                    </p>
+                    <div dangerouslySetInnerHTML={{ __html: texts.missionText }}></div>
                   </div>
                 </div>
               </section>
@@ -225,7 +257,6 @@ const Home: React.FC = () => {
     </>
   );
 }
-
 
 // export async function getStaticProps({ locale }: { locale: string }) {
 //   return {
